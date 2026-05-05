@@ -7,8 +7,8 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <header className="top-0 w-full z-50 bg-black border-b border-[oklch(65.35%_0.2419_9.27)]">
-      <nav className="flex items-center justify-between py-5 px-10">
+    <header className="fixed top-0 w-full z-50 bg-black border-t border-b border-[oklch(65.35%_0.2419_9.27)]">
+      <nav className="flex items-center justify-between py-6 px-30">
         <Link href="/">
           <img src="/assets/Logo.png" alt="Logo" className="h-8 w-auto" />
         </Link>
@@ -21,7 +21,7 @@ const Navbar = () => {
                 : "text-white"
             }
           >
-            <Link href="/" className="hover:text-pink-500 transition">
+            <Link href="/" className="hover:text-[oklch(65.35%_0.2419_9.27)]">
               HOME
             </Link>
           </li>
@@ -33,7 +33,10 @@ const Navbar = () => {
                 : "text-white"
             }
           >
-            <Link href="/events" className="hover:text-pink-500 transition">
+            <Link
+              href="/events"
+              className="hover:text-[oklch(65.35%_0.2419_9.27)]"
+            >
               EVENTS
             </Link>
           </li>
@@ -45,7 +48,10 @@ const Navbar = () => {
                 : "text-white"
             }
           >
-            <Link href="/booking" className="hover:text-pink-500 transition">
+            <Link
+              href="/booking"
+              className="hover:text-[oklch(65.35%_0.2419_9.27)]"
+            >
               BOOK TABLE
             </Link>
           </li>
@@ -57,7 +63,10 @@ const Navbar = () => {
                 : "text-white"
             }
           >
-            <Link href="/contact" className="hover:text-pink-500 transition">
+            <Link
+              href="/contact"
+              className="hover:text-[oklch(65.35%_0.2419_9.27)]"
+            >
               CONTACT US
             </Link>
           </li>
