@@ -4,7 +4,7 @@ export async function NewsletterAction(prevState, formData) {
   const email = formData.get("email");
 
   if (!email || !email.includes("@")) {
-    return { error: "Indtast venligst en gyldig e-mailadresse." };
+    return { error: "Please enter a valid email address." };
   }
 
   try {
