@@ -1,3 +1,4 @@
+import LatestVideo from "@/components/forside/LatestVideo";
 import Newsletter from "@/components/forside/Newsletter";
 import Testimonials from "@/components/forside/Testimonials";
 import WelcomeToNightClub from "@/components/forside/WelcomeToNightClub";
@@ -15,7 +16,7 @@ export default async function Home() {
     <div>
       <Navbar />
       <WelcomeToNightClub />
-
+      <LatestVideo />
       <Testimonials testimonials={testimonials} />
 
       <Newsletter />
