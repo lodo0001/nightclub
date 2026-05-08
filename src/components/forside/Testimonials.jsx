@@ -30,7 +30,7 @@ const Testimonials = ({ testimonials }) => {
         className="absolute inset-0 w-full h-full object-cover opacity-10"
       />
 
-      <div className="relative z-10 flex flex-col items-center justify-center">
+      <div className="relative z-10 flex flex-col items-center justify-center -mt-12">
         <div className="overflow-hidden w-full" ref={emblaRef}>
           <div className="flex">
             {testimonials.map((testimonials) => (
@@ -44,8 +44,11 @@ const Testimonials = ({ testimonials }) => {
                     alt={testimonials.asset.alt}
                     className="object-cover mx-auto mb-4"
                   />
-                  <h2>{testimonials.name}</h2>
+                  <h2 className="font-extrabold uppercase text-2xl mb-3">
+                    {testimonials.name}
+                  </h2>
                   <p>{testimonials.content}</p>
+
                   <div className="flex justify-center items-center gap-3 mt-3">
                     <a href={testimonials.facebook}>
                       <AiOutlineFacebook
