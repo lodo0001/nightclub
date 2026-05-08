@@ -22,7 +22,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-black border-t border-b border-[oklch(65.35%_0.2419_9.27)] header-corners">
+    <header className="sticky top-0 z-50 w-full bg-black border-t border-b border-[oklch(65.35%_0.2419_9.27)] header-corners">
       <nav className="flex items-center justify-between py-6 px-6 md:px-20">
         <Link href="/">
           <img src="/assets/Logo.png" alt="Logo" className="h-8 w-auto" />
