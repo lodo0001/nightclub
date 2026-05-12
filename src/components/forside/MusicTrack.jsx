@@ -7,6 +7,7 @@ import PlayerControls from "@/components/forside/MT_PlayerControls";
 import ProgressBar from "@/components/forside/MT_ProgressBar";
 import VolumeControl from "@/components/forside/MT_VolumeControl";
 import TrackGallery from "@/components/forside/MT_Gallery";
+import { AiOutlinePlaySquare } from "react-icons/ai";
 
 import {
   BsFillVolumeUpFill,
@@ -119,21 +120,29 @@ const MusicTrack = () => {
   return (
     <div className="grid justify-center m-15 text-white">
       {/* HEADER */}
-      <div className="grid justify-items-center m-10">
-        <h1 className="font-extrabold text-2xl">NIGHT CLUB TRACK</h1>
+      <div className="grid justify-items-center m-1">
+        <h1 className="font-extrabold text-sm sm:text-xl mg:text-1xl lg:text-2xl">
+          NIGHT CLUB TRACK
+        </h1>
 
         <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
 
       {/* Main indhold */}
-      <div className="flex flex-col lg:flex-row gap-10 mt-10">
+      <div className="flex flex-col lg:flex-row  gap-10 mt-10">
         {/* TRACK IMAGE */}
-        <img src={currentTrack.image} alt={currentTrack.title} />
+        <img
+          src={currentTrack.image}
+          alt={currentTrack.title}
+          className="hidden lg:block"
+        />
 
         {/* RIGHT SIDE */}
         <div className="flex flex-col gap-6">
           {/* TRACK TITLE */}
-          <h2 className="text-3xl font-bold">{currentTrack.title}</h2>
+          <h2 className="text-xl text-center md:text-left font-bold">
+            {currentTrack.title}
+          </h2>
 
           {/* PROGRESS BAR */}
           <input
@@ -149,7 +158,7 @@ const MusicTrack = () => {
           />
 
           {/* BOTTOM ROW */}
-          <div className="flex items-center justify-between gap-50 flex-wrap">
+          <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between lg:gap-50">
             {/* TIME */}
             <div className="flex gap-2 text-sm">
               <span>{TimeInMinAndSec(currentTime)}</span>
@@ -181,6 +190,21 @@ const MusicTrack = () => {
         currentIndex={currentIndex}
         onSelect={setCurrentIndex}
       />
+
+      {/* {knapper til mobil på gallery} */}
+      <div className="flex justify-center gap-3 mt-8 lg:hidden">
+        <AiOutlinePlaySquare
+          onClick={prevTrack}
+          size={35}
+          className="hover:text-[oklch(65.35%_0.2419_9.27)] rotate-180"
+        />
+
+        <AiOutlinePlaySquare
+          onClick={nextTrack}
+          size={35}
+          className="hover:text-[oklch(65.35%_0.2419_9.27)]"
+        />
+      </div>
 
       {/* AUDIO */}
       <audio

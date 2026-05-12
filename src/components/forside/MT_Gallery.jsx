@@ -1,21 +1,43 @@
-// komponent til MusicTrack
 "use client";
 
 export default function TrackGallery({ tracks, currentIndex, onSelect }) {
   return (
-    <div className="flex gap-6 mt-10">
-      {tracks.map((track, index) => (
-        <div
-          key={track.id}
-          onClick={() => onSelect(index)}
-          className={`cursor-pointer ${
-            index === currentIndex ? "opacity-100" : "opacity-50"
-          }`}
-        >
-          <img src={track.image} className="w-25 h-25" />
-          <p>{track.title}</p>
+    <>
+      {/* MOBILE */}
+      <div className="flex flex-col items-center mt-10 lg:hidden">
+        <div className="cursor-pointer">
+          <img
+            src={tracks[currentIndex].image}
+            alt={tracks[currentIndex].title}
+            className="w-full max-w-[350px]"
+          />
+
+          <p className="text-center font-bold mt-4">
+            {tracks[currentIndex].title}
+          </p>
         </div>
-      ))}
-    </div>
+      </div>
+
+      {/* DESKTOP */}
+      <div className="hidden lg:flex gap-6 mt-10">
+        {tracks.map((track, index) => (
+          <div
+            key={track.id}
+            onClick={() => onSelect(index)}
+            className={`cursor-pointer transition ${
+              index === currentIndex ? "opacity-100 scale-105" : "opacity-50"
+            }`}
+          >
+            <img
+              src={track.image}
+              alt={track.title}
+              className="w-25 h-25 object-cover"
+            />
+
+            <p>{track.title}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
