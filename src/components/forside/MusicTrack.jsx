@@ -140,21 +140,20 @@ const MusicTrack = () => {
         {/* RIGHT SIDE */}
         <div className="flex flex-col gap-6">
           {/* TRACK TITLE */}
-          <h2 className="text-xl text-center md:text-left font-bold">
+          <h2 className="text-xl text-center lg:text-left font-bold">
             {currentTrack.title}
           </h2>
 
           {/* PROGRESS BAR */}
-          <input
-            type="range"
-            min="0"
-            max={duration || 0}
-            value={currentTime}
+          <ProgressBar
+            currentTime={currentTime}
+            duration={duration}
             onChange={(e) => {
-              audioRef.current.currentTime = e.target.value;
-              setCurrentTime(e.target.value);
+              const newTime = Number(e.target.value);
+              audioRef.current.currentTime = newTime;
+              setCurrentTime(newTime);
             }}
-            className="w-full"
+            TimeInMinAndSec={TimeInMinAndSec}
           />
 
           {/* BOTTOM ROW */}
