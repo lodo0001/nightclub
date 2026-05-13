@@ -14,18 +14,18 @@ const ContactUs = () => {
               type="text"
               name="name"
               placeholder="Your Name"
-              className="border p-4 w-xl"
+              className="border p-4 md:w-90 lg:w-xl"
             ></input>
           </div>
 
           <div>
             <input
-              className="border p-4 w-xl"
               id="email"
               type="email"
               name="email"
               placeholder="Your Email"
               required
+              className="border p-4 md:w-90 lg:w-xl"
             />
           </div>
 
@@ -33,7 +33,7 @@ const ContactUs = () => {
             <textarea
               placeholder="Your Comment"
               name="comment"
-              className="border p-4 w-full max-w-xl"
+              className="border p-4 w-full md:w-90 lg:w-xl"
             />
           </div>
 
