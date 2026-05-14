@@ -18,7 +18,7 @@ export default async function Home() {
   return (
     <div>
       <Navbar />
-      {/* <WelcomeToNightClub /> */}
+      <WelcomeToNightClub />
       <FeaturedEvents />
       <Gallery />
       <MusicTrack />

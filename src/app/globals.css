@@ -41,27 +41,22 @@ li {
   letter-spacing: 0.1rem;
 }
 
-/* css til navbar */
-header.header-corners {
-  position: relative;
-}
-
-header.header-corners::before,
-header.header-corners::after {
+.pink-corners::before,
+.pink-corners::after {
   content: "";
   position: absolute;
-  width: 24px;
-  height: 24px;
+  width: 50px;
+  height: 50px;
   background: oklch(65.35% 0.2419 9.27);
 }
 
-header.header-corners::before {
+.pink-corners::before {
   top: 0;
   left: 0;
   clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
-header.header-corners::after {
+.pink-corners::after {
   bottom: 0;
   right: 0;
   clip-path: polygon(100% 100%, 0 100%, 100% 0);
