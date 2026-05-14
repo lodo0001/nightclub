@@ -157,7 +157,7 @@ const MusicTrack = () => {
           />
 
           {/* BOTTOM ROW */}
-          <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between lg:gap-50">
+          <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between lg:gap-10 object-cover ">
             {/* TIME */}
             <div className="flex gap-2 text-sm">
               <span>{TimeInMinAndSec(currentTime)}</span>
