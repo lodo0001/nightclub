@@ -61,7 +61,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
     .map((res) => res.table.toString());
 
   return (
-    <div className="max-w-[1200px] mx-auto -mt-20">
+    <div className="max-w-[1200px] mx-auto -mt-20 px-4 sm:px-6 md:px-8">
       <form action={formAction}>
         <div>
           <h2 className="text-xl font-bold mb-4">CHOOSE AN EVENT:</h2>
