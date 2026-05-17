@@ -8,18 +8,31 @@ import WelcomeToNightClub from "@/components/forside/WelcomeToNightClub";
 import Navbar from "@/components/Navbar";
 
 export default async function Home() {
-  const res = await fetch(`${process.env.DATA_API}/testimonials`);
+  const [resTestimonials, resEvents] = await Promise.all([
+    fetch(`${process.env.DATA_API}/testimonials`),
+    fetch(`${process.env.DATA_API}/events`),
+  ]);
 
-  const testimonials = await res.json();
+  const testimonials = await resTestimonials.json();
+  const allEvents = await resEvents.json();
+
   testimonials.forEach((testimonials) => {
     testimonials.asset.url = `${process.env.DATA_API}${testimonials.asset.url}`;
+  });
+
+  const featuredEvents = allEvents.filter((event) => event.isFeatured === true);
+
+  featuredEvents.forEach((event) => {
+    if (event.asset) {
+      event.asset.url = `${process.env.DATA_API}${event.asset.url}`;
+    }
   });
 
   return (
     <div>
       <Navbar />
       <WelcomeToNightClub />
-      <FeaturedEvents />
+      <FeaturedEvents events={featuredEvents} />
       <Gallery />
       <MusicTrack />
       <LatestVideo />
