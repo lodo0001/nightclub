@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useActionState } from "react";
 import { reservationsAction } from "@/app/actions/reservations";
 
-// RETTET: chosenEvent er sat til null som standard i stedet for [] for at undgå fejl med .split()
 const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
   const [state, formAction, isPending] = useActionState(
     reservationsAction,
