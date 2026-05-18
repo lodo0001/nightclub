@@ -8,13 +8,19 @@ import WelcomeToNightClub from "@/components/forside/WelcomeToNightClub";
 import Navbar from "@/components/Navbar";
 
 export default async function Home() {
-  const [resTestimonials, resEvents] = await Promise.all([
+  const [resTestimonials, resEvents, resGallery] = await Promise.all([
     fetch(`${process.env.DATA_API}/testimonials`),
     fetch(`${process.env.DATA_API}/events`),
+    fetch(`${process.env.DATA_API}/gallery`),
   ]);
 
   const testimonials = await resTestimonials.json();
   const allEvents = await resEvents.json();
+  const gallery = await resGallery.json();
+
+  gallery.forEach((img) => {
+    img.asset.url = `${process.env.DATA_API}${img.asset.url}`;
+  });
 
   testimonials.forEach((testimonials) => {
     testimonials.asset.url = `${process.env.DATA_API}${testimonials.asset.url}`;
@@ -33,7 +39,7 @@ export default async function Home() {
       <Navbar />
       <WelcomeToNightClub />
       <FeaturedEvents events={featuredEvents} />
-      <Gallery />
+      <Gallery gallery={gallery} />
       <MusicTrack />
       <LatestVideo />
       <Testimonials testimonials={testimonials} />
