@@ -9,6 +9,7 @@ export async function reservationsAction(prevState, formData) {
   const eventId = formData.get("eventId");
   const rawDate = formData.get("date");
   const eventTime = formData.get("eventTime") || "20:00";
+  const comment = formData.get("comment");
 
   if (!email || !email.includes("@")) {
     return { success: false, error: "Please enter a valid email address." };
@@ -31,6 +32,7 @@ export async function reservationsAction(prevState, formData) {
     date: formattedDate,
     phone: phone.toString(),
     eventId: parseInt(eventId),
+    comment: comment,
   };
 
   try {

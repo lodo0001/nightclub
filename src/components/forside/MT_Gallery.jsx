@@ -28,13 +28,27 @@ export default function TrackGallery({ tracks, currentIndex, onSelect }) {
               index === currentIndex ? "opacity-100 scale-105" : "opacity-50"
             }`}
           >
-            <img
-              src={track.image}
-              alt={track.title}
-              className="w-25 h-25 object-cover"
-            />
+            {/* IMAGE WRAPPER */}
+            <div className="relative group">
+              <img
+                src={track.image}
+                alt={track.title}
+                className="w-32 h-32 object-cover"
+              />
 
-            <p>{track.title}</p>
+              {/* OVERLAY */}
+              <div
+                className="
+           absolute inset-0
+           opacity-0
+           group-hover:opacity-100
+           transition-opacity duration-500
+           pink-corners
+         "
+              ></div>
+            </div>
+
+            <p className="text-center mt-2">{track.title}</p>
           </div>
         ))}
       </div>

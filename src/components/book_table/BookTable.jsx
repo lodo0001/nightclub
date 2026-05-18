@@ -158,7 +158,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
               id="email"
               type="email"
               name="email"
-              placeholder="Enter Your Email"
+              placeholder="Your Email"
               required
               onChange={changeInput}
               className="w-full p-2 bg-black border placeholder-white/80"
@@ -196,10 +196,19 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
               className="w-full p-2 bg-black border placeholder-white/80"
             />
 
+            <input
+              id="comment"
+              type="text"
+              name="comment"
+              placeholder="Additional Comments"
+              onChange={changeInput}
+              className="w-full p-2 bg-black border placeholder-white/80"
+            />
+
             <button
               type="submit"
               disabled={isPending}
-              className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative col-span-2 justify-self-end"
+              className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative col-span-2 justify-self-end mt-8"
             >
               <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-white"></span>
               <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
@@ -213,12 +222,12 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
 
           <div className="mt-4 min-h-[20px]">
             {state?.error && (
-              <p className="text-red-500 text-xs font-bold uppercase">
+              <p className="text-red-500 text-xs font-bold uppercase grid justify-items-center">
                 {state.error}
               </p>
             )}
             {state?.success && (
-              <p className="text-green-400 text-xs font-bold uppercase ">
+              <p className="text-green-400 text-xs font-bold uppercase grid justify-items-center ">
                 {state.message}
               </p>
             )}
