@@ -118,10 +118,10 @@ const MusicTrack = () => {
   };
 
   return (
-    <div className="grid justify-center m-15 text-white">
+    <div className="grid justify-center m-15 text-white ">
       {/* HEADER */}
       <div className="grid justify-items-center m-1">
-        <h1 className="font-extrabold text-sm sm:text-xl mg:text-1xl lg:text-2xl">
+        <h1 className="font-extrabold text-xl mg:text-1xl lg:text-2xl">
           NIGHT CLUB TRACK
         </h1>
 

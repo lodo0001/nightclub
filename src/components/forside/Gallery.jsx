@@ -34,16 +34,16 @@ const Gallery = ({ gallery }) => {
   };
 
   return (
-    <div className="grid">
+    <div className="grid mb-20 mt-8">
       <div className="grid justify-items-center m-10">
-        <h1 className="font-extrabold text-sm sm:text-xl md:text-2xl lg:text-3xl">
+        <h1 className="font-extrabold text-md md:text-1xl lg:text-2xl">
           NIGHT CLUB GALLERY
         </h1>
         <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
 
       <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
-        <div className="grid grid-cols-12 auto-rows-[300px] overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-12 auto-rows-[300px]">
           {gallery.slice(0, 7).map((img, index) => {
             const layouts = [
               "col-span-3",
@@ -58,14 +58,14 @@ const Gallery = ({ gallery }) => {
             return (
               <motion.div
                 key={img.id}
-                className={`group relative overflow-hidden ${layouts[index]}`}
+                className={`group relative overflow-hidden h-[300px] md:h-auto ${layouts[index]}`}
                 initial={{ opacity: 0, x: -200 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{
                   duration: 1,
                   ease: "easeOut",
-                  delay: index * 0.2,
+                  delay: index * 0.1,
                 }}
               >
                 <div
@@ -91,8 +91,17 @@ const Gallery = ({ gallery }) => {
           <Dialog.Content className="fixed left-1/2 top-1/2 w-[85vw] max-w-[700px] -translate-x-1/2 -translate-y-1/2 bg-black p-6 z-50 rounded-lg text-white md:block overflow-visible">
             <button
               onClick={scrollPrev}
-              className="absolute -left-16 top-1/2 -translate-y-1/2 rotate-180 hidden sm:block transition transform hover:scale-110 z-50"
-              aria-label="Forrige billede"
+              className="
+              absolute
+              left-2 md:-left-16
+              top-1/2
+              -translate-y-1/2
+              rotate-180
+              transition
+              transform
+              hover:scale-110
+              z-50
+            "
             >
               <AiOutlinePlaySquare
                 size={45}
@@ -102,8 +111,16 @@ const Gallery = ({ gallery }) => {
 
             <button
               onClick={scrollNext}
-              className="absolute -right-16 top-1/2 -translate-y-1/2 hidden sm:block transition transform hover:scale-110 z-50"
-              aria-label="Næste billede"
+              className="
+    absolute
+    right-2 md:-right-16
+    top-1/2
+    -translate-y-1/2
+    transition
+    transform
+    hover:scale-110
+    z-50
+  "
             >
               <AiOutlinePlaySquare
                 size={45}

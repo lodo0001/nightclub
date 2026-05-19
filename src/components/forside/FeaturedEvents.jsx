@@ -2,16 +2,21 @@ import Link from "next/link";
 
 const FeaturedEvents = ({ events }) => {
   return (
-    <div className="grid justify-center m-15">
+    <div className="relative grid justify-center pb-20 bg-[#0b0813] overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute top-[-120px] left-[-100px] w-[450px] h-[450px] bg-[oklch(5%_0.18_255)] blur-3xl rounded-full opacity-50" />
+        <div className="absolute top-[200px] right-[-140px] w-[500px] h-[500px] bg-[oklch(20%_0.18_265)] blur-3xl rounded-full opacity-30" />
+        <div className="absolute bottom-[-160px] left-[20%] w-[480px] h-[480px] bg-[oklch(15%_0.18_290)] blur-3xl rounded-full opacity-25" />
+      </div>
       <div className="grid justify-items-center m-10">
-        <h1 className="font-extrabold text-sm sm:text-xl mg:text-1xl lg:text-2xl">
+        <h1 className="font-extrabold text-xl md:text-1xl lg:text-2xl whitespace-nowrap">
           FEATURED EVENTS
         </h1>
 
         <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+      <div className="grid grid-cols-1 ml-10 mr-10 md:grid-cols-2 md:m-2 gap-4 ">
         {events.map((event) => (
           <div key={event.id}>
             <div className="relative group overflow-hidden">
@@ -47,14 +52,14 @@ const FeaturedEvents = ({ events }) => {
                   </Link>
                 </div>
 
-                <div className="bg-black/60 p-3">
+                <div className="hidden sm:block bg-black/60 p-3">
                   <h2 className="font-extrabold ">NIGHT CLUB</h2>
                   <p>{event.excerpt}</p>
                 </div>
               </div>
             </div>
-            <div className="flex justify-between items-center p-2 bg-[oklch(53.17%_0.1971_9.42)]">
-              <h2 className="font-extrabold ">{event.title}</h2>
+            <div className="sm:grid md:flex justify-between items-center p-2 bg-[oklch(53.17%_0.1971_9.42)]">
+              <h2 className="font-extrabold text-md ">{event.title}</h2>
 
               <div className="text-sm flex gap-3 ">
                 <p>{new Date(event.date).toLocaleDateString("da-DK")}</p>-

@@ -5,7 +5,7 @@ const WelcomeToNightClub = () => {
   return (
     <div className="grid justify-center m-15">
       <div className="grid justify-items-center m-10">
-        <h1 className="font-extrabold text-sm sm:text-xl md:text-xl lg:text-2xl">
+        <h1 className="font-extrabold text-md md:text-xl lg:text-2xl whitespace-nowrap">
           WELCOME TO NIGHT CLUB
         </h1>
         <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
@@ -21,7 +21,7 @@ const WelcomeToNightClub = () => {
           />
 
           <div
-            className="absolute inset-0 bg-black/80 lg:bg-black flex flex-col items-center justify-center p-6 text-center opacity-100
+            className="absolute inset-0 bg-black/70 lg:bg-black flex flex-col items-center justify-center p-6 text-center opacity-100
 lg:opacity-0
 lg:group-hover:opacity-100 transition-opacity duration-700 pink-corners"
           >
@@ -53,13 +53,13 @@ lg:group-hover:opacity-100 transition-all duration-1000"
         {/* KORT 2: RESTAURANT */}
         <div className="relative group overflow-hidden">
           <img
-            src="/assets/content-img/reastaurant_1.jpg"
+            src="/assets/content-img/reasturant_1.jpg"
             alt="restaurant"
-            className="w-full object-cover"
+            className="w-93 object-cover"
           />
 
           <div
-            className="absolute inset-0 bg-black/80 lg:bg-black flex flex-col items-center justify-center p-6 text-center opacity-100
+            className="absolute inset-0 bg-black/70 lg:bg-black flex flex-col items-center justify-center p-6 text-center opacity-100
 lg:opacity-0
 lg:group-hover:opacity-100 transition-opacity duration-700 pink-corners"
           >
@@ -93,7 +93,7 @@ lg:group-hover:opacity-100 transition-all duration-1000"
           />
 
           <div
-            className="absolute inset-0 bg-black/80 lg:bg-black flex flex-col items-center justify-center p-6 text-center opacity-100
+            className="absolute inset-0 bg-black/70 lg:bg-black flex flex-col items-center justify-center p-6 text-center opacity-100
 lg:opacity-0
 lg:group-hover:opacity-100 transition-opacity duration-700 pink-corners"
           >
