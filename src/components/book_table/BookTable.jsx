@@ -61,12 +61,12 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
     .map((res) => res.table.toString());
 
   return (
-    <div className="w-full -mt-33 px-4 sm:px-6 md:px-8">
+    <div className="w-full -mt-34 px-4 sm:px-8 md:px-8">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8">
         <form action={formAction}>
           <div>
             <h2 className="text-xl font-bold mb-4">CHOOSE AN EVENT:</h2>
-            <div className="grid grid-cols-2 gap-4 mb-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <select
                 name="eventId"
                 value={formData.eventId}
@@ -99,7 +99,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
             </div>
           </div>
 
-          <div className="">
+          <div className="mt-15">
             <h2 className="text-xl font-bold mb-7">CHOOSE A TABLE:</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
@@ -144,9 +144,9 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
           </div>
 
           <div className="mt-20">
-            <h2 className="text-xl font-bold mb-4">WHO'S COMING?</h2>
+            <h2 className="text-xl font-bold mb-4 ">WHO'S COMING?</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid-cols-1 gap:2 md:grid grid-cols-2 gap-4">
               <input
                 id="name"
                 type="text"
