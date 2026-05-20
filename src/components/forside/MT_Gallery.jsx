@@ -28,7 +28,7 @@ export default function TrackGallery({ tracks, currentIndex, onSelect }) {
               index === currentIndex ? "opacity-100 scale-105" : "opacity-50"
             }`}
           >
-            {/* IMAGE WRAPPER */}
+            {/* IMAGE*/}
             <div className="relative group">
               <img
                 src={track.image}
@@ -36,16 +36,8 @@ export default function TrackGallery({ tracks, currentIndex, onSelect }) {
                 className="w-32 h-32 object-cover"
               />
 
-              {/* OVERLAY */}
-              <div
-                className="
-           absolute inset-0
-           opacity-0
-           group-hover:opacity-100
-           transition-opacity duration-500
-           pink-corners
-         "
-              ></div>
+              {/* Når man hover over en sang i sange gallery */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pink-corners"></div>
             </div>
 
             <p className="text-center mt-2">{track.title}</p>

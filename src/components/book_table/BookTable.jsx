@@ -71,7 +71,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 name="eventId"
                 value={formData.eventId}
                 onChange={eventChange}
-                className="w-full p-2 bg-black border border-white text-white/80"
+                className="w-full p-2 bg-black border  text-white/80 cursor-pointer"
               >
                 <option value="">Choose Event</option>
                 {allEvents.map((event) => (
@@ -81,7 +81,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 ))}
               </select>
 
-              <div className="p-2 bg-black border border-white flex flex-col justify-center">
+              <div className="p-2 bg-black border flex flex-col justify-center">
                 <input type="hidden" name="date" value={formData.date} />
                 <p>
                   <span className="mr-2 text-white/80">
@@ -133,7 +133,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                             : ""
                         }`}
                       />
-                      <span className="absolute inset-0 flex items-center justify-center font-bold text-white pointer-events-none">
+                      <span className="absolute inset-0 flex items-center justify-center font-bold pointer-events-none">
                         {isTaken ? "X" : num}
                       </span>
                     </button>
@@ -146,7 +146,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
           <div className="mt-20">
             <h2 className="text-xl font-bold mb-4">WHO'S COMING?</h2>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 id="name"
                 type="text"
@@ -154,7 +154,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 placeholder="Your Name"
                 required
                 onChange={changeInput}
-                className="w-full p-2 bg-black border placeholder-white/80"
+                className="w-full p-2 border placeholder-white/80"
               />
 
               <input
@@ -164,7 +164,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 placeholder="Your Email"
                 required
                 onChange={changeInput}
-                className="w-full p-2 bg-black border placeholder-white/80"
+                className="w-full p-2 border placeholder-white/80"
               />
 
               <input
@@ -174,7 +174,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 placeholder="Your Contact Number"
                 required
                 onChange={changeInput}
-                className="w-full p-2 bg-black border placeholder-white/80"
+                className="w-full p-2 border placeholder-white/80"
               />
 
               <input type="hidden" name="table" value={formData.table} />
@@ -186,18 +186,21 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 value={formData.table ? `Table ${formData.table}` : ""}
                 placeholder="Table Number"
                 readOnly
-                className="w-full p-2 bg-black border placeholder-white/80"
+                className="w-full p-2  border placeholder-white/80"
               />
 
-              <input
+              <select
                 id="numberOfGuests"
-                type="Number"
                 name="numberOfGuests"
-                placeholder="Number Of Guests"
                 required
                 onChange={changeInput}
-                className="w-full p-2 bg-black border placeholder-white/80"
-              />
+                className="w-full p-2 border placeholder-white/80 text-white cursor-pointer"
+              >
+                <option value="">Chose Number of Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="8">8 Guests</option>
+              </select>
 
               <input
                 id="comment"
@@ -205,13 +208,13 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 name="comment"
                 placeholder="Additional Comments"
                 onChange={changeInput}
-                className="w-full p-2 bg-black border placeholder-white/80"
+                className="w-full p-2  border placeholder-white/80"
               />
 
               <button
                 type="submit"
                 disabled={isPending}
-                className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative col-span-2 justify-self-end mt-8"
+                className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative col-span-2 justify-self-end mt-8 cursor-pointer"
               >
                 <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-white"></span>
                 <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
@@ -225,12 +228,12 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
 
             <div className="mt-4 min-h-[20px]">
               {state?.error && (
-                <p className="text-red-500 text-xs font-bold uppercase grid justify-items-center">
+                <p className="text-red-500 text-md font-bold tracking-wider grid justify-items-center">
                   {state.error}
                 </p>
               )}
               {state?.success && (
-                <p className="text-green-400 text-xs font-bold uppercase grid justify-items-center ">
+                <p className="text-green-400 text-md font-bold tracking-wider grid justify-items-center ">
                   {state.message}
                 </p>
               )}

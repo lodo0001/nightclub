@@ -36,7 +36,7 @@ export async function ContactUsAction(prevState, formData) {
     }
 
     return {
-      success: "Thanks for your message — we’ll get back to you shortly.!",
+      success: "Thanks for your message — we’ll get back to you shortly!",
     };
   } catch (err) {
     return { error: "Could not connect to the server." };

@@ -2,13 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 import tracks from "@/musicData/tracks";
-
 import PlayerControls from "@/components/forside/MT_PlayerControls";
 import ProgressBar from "@/components/forside/MT_ProgressBar";
 import VolumeControl from "@/components/forside/MT_VolumeControl";
 import TrackGallery from "@/components/forside/MT_Gallery";
-import { AiOutlinePlaySquare } from "react-icons/ai";
 
+import { AiOutlinePlaySquare } from "react-icons/ai";
 import {
   BsFillVolumeUpFill,
   BsFillVolumeMuteFill,
@@ -118,13 +117,12 @@ const MusicTrack = () => {
   };
 
   return (
-    <div className="grid justify-center m-15 text-white ">
+    <div className="grid justify-center m-15 ">
       {/* HEADER */}
       <div className="grid justify-items-center m-1">
-        <h1 className="font-extrabold text-xl mg:text-1xl lg:text-2xl">
+        <h1 className="font-extrabold text-xl md:text-1xl lg:text-2xl">
           NIGHT CLUB TRACK
         </h1>
-
         <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
 
@@ -183,7 +181,7 @@ const MusicTrack = () => {
         </div>
       </div>
 
-      {/* GALLERY */}
+      {/* SANGE GALLERY */}
       <TrackGallery
         tracks={tracks}
         currentIndex={currentIndex}
@@ -195,14 +193,10 @@ const MusicTrack = () => {
         <AiOutlinePlaySquare
           onClick={prevTrack}
           size={35}
-          className="hover:text-[oklch(65.35%_0.2419_9.27)] rotate-180"
+          className=" rotate-180"
         />
 
-        <AiOutlinePlaySquare
-          onClick={nextTrack}
-          size={35}
-          className="hover:text-[oklch(65.35%_0.2419_9.27)]"
-        />
+        <AiOutlinePlaySquare onClick={nextTrack} size={35} />
       </div>
 
       {/* AUDIO */}

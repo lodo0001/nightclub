@@ -28,7 +28,7 @@ export const Navbar = () => {
           <img src="/assets/Logo.png" alt="Logo" className="h-8 w-auto" />
         </Link>
 
-        {/* kode til computer*/}
+        {/* Kode til computer*/}
         <div
           className="hidden md:flex gap-10"
           onMouseLeave={() => setHoveredPath(null)}
@@ -47,26 +47,23 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* kode til burger menu */}
-        <button
-          popoverTarget="burger-menu"
-          className="md:hidden text-white p-2"
-        >
+        {/* Kode til burger menu */}
+        <button popoverTarget="burger-menu" className="md:hidden p-2">
           <Menu size={32} />
         </button>
 
         <div
           id="burger-menu"
           popover="auto"
-          className="fixed inset-0 w-full h-full bg-black/60 backdrop-blur-md p-0 m-0 border-none outline-none overflow-hidden"
+          className="fixed inset-0 w-full h-full bg-black/60 backdrop-blur-md overflow-hidden"
         >
-          <div className="flex flex-col items-center justify-center h-full w-full gap-8 relative">
+          <div className="flex flex-col items-center justify-center h-full w-full gap-7 relative">
             <button
               popoverTarget="burger-menu"
               popoverTargetAction="hide"
               className="absolute top-8 right-8 text-white"
             >
-              <X size={32} />
+              <X size={40} />
             </button>
 
             {links.map((link) => (
@@ -105,9 +102,9 @@ const Links = ({
   onMouseEnter,
 }) => {
   const isActive = activePath === href;
-
   const showLine = isHovered || (isActive && hoveredPath === null);
 
+  // kode til navbar animation
   return (
     <motion.a
       initial="initial"
@@ -161,6 +158,7 @@ const Links = ({
         </div>
       </div>
 
+      {/* Ai brugt her */}
       {showLine && (
         <motion.div
           layoutId="nav-underline"

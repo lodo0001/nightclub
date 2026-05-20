@@ -7,21 +7,21 @@ import { MdOutlinePauseCircleOutline } from "react-icons/md";
 
 const PlayerControls = ({ isPlaying, onPlayPause, onNext, onPrev }) => {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex items-center gap-6 ">
       <button onClick={onPrev}>
-        <FaStepBackward size={30} />
+        <FaStepBackward size={30} className="cursor-pointer" />
       </button>
 
       <button onClick={onPlayPause}>
         {isPlaying ? (
-          <MdOutlinePauseCircleOutline size={45} />
+          <MdOutlinePauseCircleOutline size={45} className="cursor-pointer" />
         ) : (
-          <IoPlayCircleOutline size={45} />
+          <IoPlayCircleOutline size={45} className="cursor-pointer" />
         )}
       </button>
 
       <button onClick={onNext}>
-        <FaStepForward size={30} />
+        <FaStepForward size={30} className="cursor-pointer" />
       </button>
     </div>
   );

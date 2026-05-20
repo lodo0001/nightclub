@@ -41,7 +41,7 @@ const ContactUs = () => {
             <button
               type="submit"
               disabled={isPending}
-              className="self-end group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative"
+              className="self-end group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative cursor-pointer"
             >
               <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-white"></span>
               <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>

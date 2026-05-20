@@ -1,12 +1,6 @@
-// komponent til MusicTrack
 "use client";
 
-export default function ProgressBar({
-  currentTime,
-  duration,
-  onChange,
-  TimeInMinAndSec,
-}) {
+export default function ProgressBar({ currentTime, duration, onChange }) {
   return (
     <div className="flex items-center gap-4">
       <input

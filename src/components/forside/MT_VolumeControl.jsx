@@ -1,4 +1,3 @@
-// komponent til MusicTrack
 "use client";
 
 export default function VolumeControl({ icon, value, onChange }) {
@@ -13,7 +12,7 @@ export default function VolumeControl({ icon, value, onChange }) {
         step="0.10"
         value={value}
         onChange={onChange}
-        className="accent-[oklch(65.35%_0.2419_9.27)]"
+        className="accent-[oklch(65.35%_0.2419_9.27)] cursor-pointer"
       />
     </div>
   );

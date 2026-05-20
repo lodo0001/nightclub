@@ -48,7 +48,7 @@ export async function reservationsAction(prevState, formData) {
       return {
         success: true,
         message:
-          "Thank You for booking a table at NightClub! You will soon get a confirmation",
+          "Thank You for booking a table at NightClub! - You will soon get a confirmation",
       };
     }
 

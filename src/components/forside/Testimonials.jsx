@@ -69,12 +69,12 @@ const Testimonials = ({ testimonials }) => {
           </div>
         </div>
 
-        <div className="flex justify-center gap-3 ">
+        <div className="flex justify-center gap-4 ">
           {testimonials.map((_, slideNumber) => (
             <button
               key={slideNumber}
               onClick={() => emblaApi?.scrollTo(slideNumber)}
-              className={`w-4 h-4 transition-all duration-300 ${
+              className={`w-4 h-4 transition-all duration-300 cursor-pointer ${
                 slideNumber === selected
                   ? "bg-[oklch(65.35%_0.2419_9.27)] scale-125"
                   : "bg-white/40"

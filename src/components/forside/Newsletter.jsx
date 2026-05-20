@@ -20,7 +20,7 @@ const Newsletter = () => {
 
       <div className="flex mt-20 flex-col">
         <form action={formAction} className="flex gap-8 w-full">
-          <div className="relative border-b border-white pb-2 w-full">
+          <div className="relative border-b pb-2 w-full">
             <input
               className="bg-transparent border-none outline-none placeholder-white font-extrabold text-sm w-full"
               id="email"
@@ -34,7 +34,7 @@ const Newsletter = () => {
           <button
             type="submit"
             disabled={isPending}
-            className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative self-start"
+            className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative self-start cursor-pointer"
           >
             <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-white"></span>
             <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
@@ -48,12 +48,12 @@ const Newsletter = () => {
 
         <div className="mt-4 min-h-[20px]">
           {state?.error && (
-            <p className="text-red-500 text-xs font-bold uppercase">
+            <p className="text-red-500 text-sm font-bold text-center">
               {state.error}
             </p>
           )}
           {state?.success && (
-            <p className="text-green-400 text-xs font-bold uppercase ">
+            <p className="text-green-400 text-sm font-bold text-center">
               {state.success}
             </p>
           )}

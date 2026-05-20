@@ -18,7 +18,7 @@ const LatestVideo = () => {
   return (
     <div className="grid justify-center m-15 ">
       <div className="grid justify-items-center m-10">
-        <h1 className="font-extrabold text-xl mg:text-1xl lg:text-2xl">
+        <h1 className="font-extrabold text-xl md:text-1xl lg:text-2xl">
           LATEST VIDEO
         </h1>
         <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
@@ -27,7 +27,7 @@ const LatestVideo = () => {
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           <div className="min-w-full flex justify-center">
-            <video controls width="1000">
+            <video controls width="1000" className="cursor-pointer">
               <source
                 src="/assets/media/video-dj-crowd-2.mp4"
                 type="video/mp4"
@@ -36,7 +36,7 @@ const LatestVideo = () => {
           </div>
 
           <div className="min-w-full flex justify-center">
-            <video controls width="1000">
+            <video controls width="1000" className="cursor-pointer">
               <source
                 src="/assets/media/video-dj-crowd1.mp4"
                 type="video/mp4"
@@ -47,13 +47,13 @@ const LatestVideo = () => {
       </div>
 
       <div className="flex gap-4 mt-4 justify-center">
-        <button onClick={scrollPrev} className="rotate-180">
+        <button onClick={scrollPrev} className="rotate-180 cursor-pointer">
           <AiOutlinePlaySquare
             size={35}
             className="hover:text-[oklch(65.35%_0.2419_9.27)]"
           />
         </button>
-        <button onClick={scrollNext} className="">
+        <button onClick={scrollNext} className="cursor-pointer">
           <AiOutlinePlaySquare
             size={35}
             className="hover:text-[oklch(65.35%_0.2419_9.27)]"

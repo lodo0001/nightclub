@@ -1,12 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    dangerouslyAllowLocalIP: true,
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "4000",
+        protocol: "https",
+        hostname: "night-club-z4oy.onrender.com",
         pathname: "/**",
       },
     ],

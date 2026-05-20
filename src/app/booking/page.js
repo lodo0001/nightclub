@@ -7,7 +7,9 @@ export default async function Home({ searchParams }) {
 
   const [eventsRes, reservationsRes] = await Promise.all([
     fetch(`${process.env.DATA_API}/events`),
-    fetch(`${process.env.DATA_API}/reservations`, { cache: "no-store" }),
+    fetch(`${process.env.DATA_API}/reservations`, {
+      cache: "no-store",
+    }),
   ]);
 
   const allEvents = await eventsRes.json();

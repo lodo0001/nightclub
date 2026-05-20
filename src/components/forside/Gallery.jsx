@@ -91,40 +91,21 @@ const Gallery = ({ gallery }) => {
           <Dialog.Content className="fixed left-1/2 top-1/2 w-[85vw] max-w-[700px] -translate-x-1/2 -translate-y-1/2 bg-black p-6 z-50 rounded-lg text-white md:block overflow-visible">
             <button
               onClick={scrollPrev}
-              className="
-              absolute
-              left-2 md:-left-16
-              top-1/2
-              -translate-y-1/2
-              rotate-180
-              transition
-              transform
-              hover:scale-110
-              z-50
-            "
+              className="absolute left-2 md:-left-16 top-1/2 -translate-y-1/2 rotate-180 transition transform hover:scale-110 z-50"
             >
               <AiOutlinePlaySquare
                 size={45}
-                className="text-white hover:text-[oklch(65.35%_0.2419_9.27)]"
+                className="text-white hover:text-[oklch(65.35%_0.2419_9.27)] cursor-pointer"
               />
             </button>
 
             <button
               onClick={scrollNext}
-              className="
-    absolute
-    right-2 md:-right-16
-    top-1/2
-    -translate-y-1/2
-    transition
-    transform
-    hover:scale-110
-    z-50
-  "
+              className="absolute right-2 md:-right-16 top-1/2 -translate-y-1/2 transition transform hover:scale-110 z-50"
             >
               <AiOutlinePlaySquare
                 size={45}
-                className="text-white hover:text-[oklch(65.35%_0.2419_9.27)]"
+                className="text-white hover:text-[oklch(65.35%_0.2419_9.27)] cursor-pointer"
               />
             </button>
 
@@ -148,7 +129,7 @@ const Gallery = ({ gallery }) => {
                       <Dialog.Title className="text-2xl font-bold mb-2">
                         NIGHT CLUB PARTY
                       </Dialog.Title>
-                      <Dialog.Description className="text-gray-400 text-sm">
+                      <Dialog.Description className="text-sm">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -165,7 +146,7 @@ const Gallery = ({ gallery }) => {
 
             {/* Luk-knap */}
             <Dialog.Close asChild>
-              <button className="absolute right-4 top-4 text-white hover:text-[oklch(65.35%_0.2419_9.27)] transition z-50">
+              <button className="absolute right-4 top-4  hover:text-[oklch(65.35%_0.2419_9.27)] transition z-50 cursor-pointer">
                 <MdClose size={30} />
               </button>
             </Dialog.Close>
