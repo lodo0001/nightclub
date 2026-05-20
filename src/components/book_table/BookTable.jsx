@@ -66,7 +66,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
         <form action={formAction}>
           <div>
             <h2 className="text-xl font-bold mb-4">CHOOSE AN EVENT:</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <select
                 name="eventId"
                 value={formData.eventId}
@@ -146,7 +146,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
           <div className="mt-20">
             <h2 className="text-xl font-bold mb-4 ">WHO'S COMING?</h2>
 
-            <div className="grid-cols-1 gap:2 md:grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 id="name"
                 type="text"
@@ -186,7 +186,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 value={formData.table ? `Table ${formData.table}` : ""}
                 placeholder="Table Number"
                 readOnly
-                className="w-full p-2  border placeholder-white/80"
+                className="w-full p-2 border text-white/80 font-extrabold"
               />
 
               <select
@@ -194,7 +194,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 name="numberOfGuests"
                 required
                 onChange={changeInput}
-                className="w-full p-2 border placeholder-white/80 text-white cursor-pointer"
+                className="w-full p-2 border text-white/80 text-white cursor-pointer"
               >
                 <option value="">Chose Number of Guests</option>
                 <option value="4">4 Guests</option>
@@ -214,7 +214,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
               <button
                 type="submit"
                 disabled={isPending}
-                className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative col-span-2 justify-self-end mt-8 cursor-pointer"
+                className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative md:col-span-2 justify-self-end mt-8 cursor-pointer"
               >
                 <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-white"></span>
                 <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
