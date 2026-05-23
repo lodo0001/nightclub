@@ -7,7 +7,7 @@ import Testimonials from "@/components/forside/Testimonials";
 import WelcomeToNightClub from "@/components/forside/WelcomeToNightClub";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+import Hero from "@/components/forside/Hero";
 
 export default async function Home() {
   const [resTestimonials, resEvents, resGallery] = await Promise.all([
@@ -38,6 +38,7 @@ export default async function Home() {
 
   return (
     <div>
+      <Hero />
       <Navbar />
       <WelcomeToNightClub />
       <FeaturedEvents events={featuredEvents} />
