@@ -6,6 +6,8 @@ import Newsletter from "@/components/forside/Newsletter";
 import Testimonials from "@/components/forside/Testimonials";
 import WelcomeToNightClub from "@/components/forside/WelcomeToNightClub";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 
 export default async function Home() {
   const [resTestimonials, resEvents, resGallery] = await Promise.all([
@@ -44,6 +46,7 @@ export default async function Home() {
       <LatestVideo />
       <Testimonials testimonials={testimonials} />
       <Newsletter />
+      <Footer />
     </div>
   );
 }
