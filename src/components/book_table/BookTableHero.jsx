@@ -2,7 +2,7 @@ const BookTableHero = () => {
   return (
     <div className="relative h-[60vh] md:h-[60vh] lg:h-[65vh] overflow-hidden transition-all duration-500 ease-in-out -top-33">
       <img
-        src="/assets/bg/footerbg.jpg"
+        src="/assets/bg/footerbg.webp"
         alt="hero"
         className="absolute inset-0 w-full h-full object-cover object-[center_55%] md:object-center lg:object-center [clip-path:inset(130px_0_120px_0)]"
       ></img>

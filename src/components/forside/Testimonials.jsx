@@ -26,7 +26,7 @@ const Testimonials = ({ testimonials }) => {
   return (
     <div className="relative overflow-hidden py-16">
       <img
-        src="/assets/bg/footerbg.jpg"
+        src="/assets/bg/footerbg.webp"
         className="absolute inset-0 w-full h-full object-cover opacity-10"
       />
 
