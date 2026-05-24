@@ -1,6 +1,7 @@
 import BookTableHero from "@/components/book_table/BookTableHero";
 import BookTable from "@/components/book_table/BookTable";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default async function Home({ searchParams }) {
   try {
@@ -18,6 +19,7 @@ export default async function Home({ searchParams }) {
 
     const selectedEvent =
       allEvents.find((e) => e.id === parseInt(eventId)) || null;
+
 
     return (
       <div>
