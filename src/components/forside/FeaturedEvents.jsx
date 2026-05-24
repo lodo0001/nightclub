@@ -9,7 +9,7 @@ const FeaturedEvents = ({ events }) => {
         <div className="absolute bottom-[-160px] left-[20%] w-[480px] h-[480px] bg-[oklch(15%_0.18_290)] blur-3xl rounded-full opacity-25" />
       </div>
       <div className="grid justify-items-center m-10">
-        <h1 className="font-extrabold text-xl md:text-1xl lg:text-2xl whitespace-nowrap">
+        <h1 className="font-extrabold text-md md:text-xl lg:text-2xl 2xl:text-3xl whitespace-nowrap">
           FEATURED EVENTS
         </h1>
         <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
