@@ -1,3 +1,13 @@
+import { GrFacebookOption } from "react-icons/gr";
+import { GrSnapchat } from "react-icons/gr";
+import { FaInstagram } from "react-icons/fa";
+
+const soMeLinks = {
+  facebook: "https://facebook.com",
+  snapchat: "https://snapchat.com",
+  instagram: "http://instagram.com",
+};
+
 const Footer = () => {
   return (
     <footer className="relative w-full overflow-hidden text-sm">
@@ -105,26 +115,32 @@ const Footer = () => {
             <p>Stay Connected With Us</p>
 
             <div className="flex gap-5 justify-center">
-              <div className="h-8 w-8 border border-white flex items-center justify-center cursor-pointer">
-                <img
-                  src="/assets/icon/facebook.png"
-                  className="h-4 w-4 object-contain"
-                />
-              </div>
+              <a href={soMeLinks.facebook}>
+                <div className="group h-8 w-8 border  flex items-center justify-center cursor-pointer transition hover:border-[oklch(65.35%_0.2419_9.27)]">
+                  <GrFacebookOption
+                    size={23}
+                    className="text-white transition group-hover:text-[oklch(65.35%_0.2419_9.27)]"
+                  />
+                </div>
+              </a>
 
-              <div className="h-8 w-8 border border-white flex items-center justify-center cursor-pointer">
-                <img
-                  src="/assets/icon/snap.png"
-                  className="h-4 w-4 object-contain"
-                />
-              </div>
+              <a href={soMeLinks.snapchat}>
+                <div className="group h-8 w-8 border flex items-center justify-center cursor-pointer transition hover:border-[oklch(65.35%_0.2419_9.27)]">
+                  <GrSnapchat
+                    size={18}
+                    className="text-white transition group-hover:text-[oklch(65.35%_0.2419_9.27)]"
+                  />
+                </div>
+              </a>
 
-              <div className="h-8 w-8 border border-white flex items-center justify-center cursor-pointer">
-                <img
-                  src="/assets/icon/insta.png"
-                  className="h-4 w-4 object-contain"
-                />
-              </div>
+              <a href={soMeLinks.instagram}>
+                <div className="group h-8 w-8 border  flex items-center justify-center cursor-pointer transition hover:border-[oklch(65.35%_0.2419_9.27)]">
+                  <FaInstagram
+                    size={22}
+                    className="text-white transition group-hover:text-[oklch(65.35%_0.2419_9.27)]"
+                  />
+                </div>
+              </a>
             </div>
           </div>
 
