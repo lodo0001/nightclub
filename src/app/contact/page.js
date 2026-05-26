@@ -9,7 +9,12 @@ export default function Home() {
     <div>
       <Navbar />
       <ContactHero />
-      <Contact />
+      <div
+        className="w-full bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/assets/bg/pattern_bg.webp')" }}
+      >
+        <Contact />
+      </div>
       <Footer />
     </div>
   );

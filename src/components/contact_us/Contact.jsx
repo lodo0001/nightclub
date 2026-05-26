@@ -36,7 +36,7 @@ const ContactUs = () => {
             <textarea
               placeholder="Your Comment"
               name="comment"
-              className="border p-4 w-full md:w-90 lg:w-xl"
+              className="border p-4 w-full h-60 md:w-90 lg:w-xl"
             />
           </div>
 

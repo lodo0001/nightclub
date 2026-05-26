@@ -11,47 +11,64 @@ import Hero from "@/components/forside/Hero";
 
 export default async function Home() {
   try {
-  const [resTestimonials, resEvents, resGallery] = await Promise.all([
-    fetch(`${process.env.DATA_API}/testimonials`),
-    fetch(`${process.env.DATA_API}/events`),
-    fetch(`${process.env.DATA_API}/gallery`),
-  ]);
+    const [resTestimonials, resEvents, resGallery] = await Promise.all([
+      fetch(`${process.env.DATA_API}/testimonials`),
+      fetch(`${process.env.DATA_API}/events`),
+      fetch(`${process.env.DATA_API}/gallery`),
+    ]);
 
-  const testimonials = await resTestimonials.json();
-  const allEvents = await resEvents.json();
-  const gallery = await resGallery.json();
+    const testimonials = await resTestimonials.json();
+    const allEvents = await resEvents.json();
+    const gallery = await resGallery.json();
 
-  gallery.forEach((img) => {
-    img.asset.url = `${process.env.DATA_API}${img.asset.url}`;
-  });
+    gallery.forEach((img) => {
+      img.asset.url = `${process.env.DATA_API}${img.asset.url}`;
+    });
 
-  testimonials.forEach((testimonials) => {
-    testimonials.asset.url = `${process.env.DATA_API}${testimonials.asset.url}`;
-  });
+    testimonials.forEach((testimonials) => {
+      testimonials.asset.url = `${process.env.DATA_API}${testimonials.asset.url}`;
+    });
 
-  const featuredEvents = allEvents.filter((event) => event.isFeatured === true);
+    const featuredEvents = allEvents.filter(
+      (event) => event.isFeatured === true,
+    );
 
-  featuredEvents.forEach((event) => {
-    if (event.asset) {
-      event.asset.url = `${process.env.DATA_API}${event.asset.url}`;
-    }
-  });
+    featuredEvents.forEach((event) => {
+      if (event.asset) {
+        event.asset.url = `${process.env.DATA_API}${event.asset.url}`;
+      }
+    });
 
-  return (
-    <div>
-      <Hero />
-      <Navbar />
-      <WelcomeToNightClub />
-      <FeaturedEvents events={featuredEvents} />
-      <Gallery gallery={gallery} />
-      <MusicTrack />
-      <LatestVideo />
-      <Testimonials testimonials={testimonials} />
-      <Newsletter />
-      <Footer />
-    </div>
-  );
-} catch (error) {
+    return (
+      <div>
+        <Hero />
+        <Navbar />
+        <div
+          className="w-full bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/assets/bg/pattern_bg.webp')" }}
+        >
+          <WelcomeToNightClub />
+        </div>
+        <FeaturedEvents events={featuredEvents} />
+        <div
+          className="w-full bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/assets/bg/pattern_bg.webp')" }}
+        >
+          <Gallery gallery={gallery} />
+        </div>
+        <MusicTrack />
+        <div
+          className="w-full bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/assets/bg/pattern_bg.webp')" }}
+        >
+          <LatestVideo />
+        </div>
+        <Testimonials testimonials={testimonials} />
+        <Newsletter />
+        <Footer />
+      </div>
+    );
+  } catch (error) {
     console.error(error);
 
     return (
