@@ -10,7 +10,7 @@ export default async function EventPage({ params }) {
   try {
     const res = await fetch(
       `${process.env.DATA_API}/events/${id}?_embed=comments`,
-      { cache: "no-store" }
+      { cache: "no-store" },
     );
 
     if (!res.ok) {
@@ -28,9 +28,14 @@ export default async function EventPage({ params }) {
     return (
       <div>
         <Navbar />
-        <InfoHero event={eventData} />
-        <Info event={eventData} />
-        <Comments comments={comments} eventId={eventData.id} />
+        <div
+          className="w-full bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/assets/bg/pattern_bg.webp')" }}
+        >
+          <InfoHero event={eventData} />
+          <Info event={eventData} />
+          <Comments comments={comments} eventId={eventData.id} />
+        </div>
         <Footer />
       </div>
     );
@@ -40,7 +45,6 @@ export default async function EventPage({ params }) {
     return (
       <div>
         <Navbar />
-
         <div style={{ padding: "2rem", textAlign: "center" }}>
           <h2>An error occurred. Please try again later :(</h2>
         </div>

@@ -5,7 +5,7 @@ import { reservationsAction } from "@/app/actions/reservations";
 const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
   const [state, formAction, isPending] = useActionState(
     reservationsAction,
-    null
+    null,
   );
 
   const [formData, setFormData] = useState({
@@ -100,7 +100,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                   <span className="font-bold">
                     {formData.date
                       ? `${new Date(formData.date).toLocaleDateString(
-                          "da-DK"
+                          "da-DK",
                         )} - ${eventTime}pm`
                       : "Select an event first"}
                   </span>
@@ -128,8 +128,8 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                         isTaken
                           ? "opacity-30 cursor-not-allowed grayscale"
                           : formData.table === num.toString()
-                          ? "scale-110 brightness-125"
-                          : "hover:scale-105 opacity-80 hover:opacity-100"
+                            ? "scale-110 brightness-125"
+                            : "hover:scale-105 opacity-80 hover:opacity-100"
                       }`}
                     >
                       <img
@@ -146,7 +146,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                       </span>
                     </button>
                   );
-                }
+                },
               )}
             </div>
           </div>
