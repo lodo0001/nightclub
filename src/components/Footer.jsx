@@ -48,7 +48,7 @@ const Footer = () => {
 
             <div className="flex gap-4 mb-5 items-start">
               <img
-                src="/assets/content-img/recent_post1.jpg"
+                src="/assets/content-img/recent_post1.webp"
                 className="h-full w-auto"
               />
               <div>
@@ -64,7 +64,7 @@ const Footer = () => {
 
             <div className="flex gap-4 items-start">
               <img
-                src="/assets/content-img/recent_post2.jpg"
+                src="/assets/content-img/recent_post2.webp"
                 className="h-full w-auto"
               />
               <div>
@@ -85,7 +85,7 @@ const Footer = () => {
             </h2>
 
             <div className="flex gap-4 mb-5 items-start">
-              <img src="/assets/icon/x.png" className="h-4 w-auto mt-1" />
+              <img src="/assets/icon/x.webp" className="h-4 w-auto mt-1" />
               <div>
                 <p className="w-70 leading-8 tracking-[0.02em]">
                   It is a long established fact that a reader will be distracted
@@ -96,7 +96,7 @@ const Footer = () => {
             </div>
 
             <div className="flex gap-4 items-start">
-              <img src="/assets/icon/x.png" className="h-4 w-auto mt-1" />
+              <img src="/assets/icon/x.webp" className="h-4 w-auto mt-1" />
               <div>
                 <p className="w-70 leading-8 tracking-[0.02em]">
                   It is a long established fact that a reader will be distracted

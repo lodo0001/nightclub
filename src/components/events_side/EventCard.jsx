@@ -66,12 +66,12 @@ export default function EventCard({ events }) {
                 <p>{event.description}</p>
                 <div className="justify-end flex">
                   <Link href={`/events/${event.id}`}>
-                    <button className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative cursor-pointer mt-30">
+                    <button className="group inline-block text-lg hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-500 relative cursor-pointer mt-30">
                       <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-white"></span>
-                      <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+                      <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
                       READ MORE
                       <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-white"></span>
-                      <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>{" "}
+                      <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>{" "}
                     </button>
                   </Link>
                 </div>
@@ -98,12 +98,12 @@ export default function EventCard({ events }) {
                 <p>{event.description}</p>
                 <div className="justify-end flex">
                   <Link href={`/events/${event.id}`}>
-                    <button className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative cursor-pointer mt-30">
+                    <button className="group inline-block text-lg hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-500 relative cursor-pointer mt-30">
                       <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-white"></span>
-                      <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+                      <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[oklch(65.35%_0.2419_9.27)]scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
                       READ MORE
                       <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-white"></span>
-                      <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
+                      <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
                     </button>
                   </Link>
                 </div>
@@ -121,11 +121,11 @@ export default function EventCard({ events }) {
       ))}
       <div className="relative">
         <img
-          src="/assets/bg/pattern_bg.jpg"
+          src="/assets/bg/pattern_bg.webp"
           className="w-full h-40 object-cover"
         />
 
-        <div className="absolute inset-0 flex items-center justify-center gap-6 text-white ">
+        <div className="absolute inset-0 flex items-center justify-center gap-6 ">
           {Array.from({ length: totalPages }).map((_, i) => {
             const pageNumber = i + 1;
 
@@ -133,12 +133,12 @@ export default function EventCard({ events }) {
               <button
                 key={pageNumber}
                 onClick={() => changePage(pageNumber)}
-                className="relative text-lg cursor-pointer "
+                className="relative text-lg cursor-pointer hover:text-[oklch(65.35%_0.2419_9.27)]"
               >
                 {pageNumber}
 
                 {page === pageNumber && (
-                  <span className="absolute left-0 right-0 -bottom-1 h-0.5 bg-white cursor-pointer"></span>
+                  <span className="absolute left-0 right-0 -bottom-1 h-0.5 bg-white  cursor-pointer "></span>
                 )}
               </button>
             );
@@ -147,7 +147,7 @@ export default function EventCard({ events }) {
           {page < totalPages && (
             <button
               onClick={() => changePage(page + 1)}
-              className="text-lg ml-4 cursor-pointer"
+              className="text-lg ml-4 cursor-pointer hover:text-[oklch(65.35%_0.2419_9.27)]"
             >
               NEXT
             </button>

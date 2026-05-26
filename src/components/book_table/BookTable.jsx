@@ -32,9 +32,9 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
 
   const tableSize = (num) => {
     if ([1, 2, 4, 6, 7, 9, 11, 12, 14].includes(num))
-      return "/assets/table/table_1.png";
-    if ([3, 8, 13].includes(num)) return "/assets/table/table_2.png";
-    if ([5, 10, 15].includes(num)) return "/assets/table/table_3.png";
+      return "/assets/table/table_1.webp";
+    if ([3, 8, 13].includes(num)) return "/assets/table/table_2.webp";
+    if ([5, 10, 15].includes(num)) return "/assets/table/table_3.webp";
   };
 
   const changeInput = (e) => {
@@ -137,10 +137,8 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                         alt={`Table ${num}`}
                         className={`mx-auto ${
                           formData.table === num.toString()
-                            ? "drop-shadow-[0_0_10px_#FF2A70]"
+                            ? "drop-shadow-[0_0_10px_oklch(65.35%_0.2419_9.27)]"
                             : isTaken
-                            ? "drop-shadow-[0_0_8px_#ff0000]"
-                            : ""
                         }`}
                       />
                       <span className="absolute inset-0 flex items-center justify-center font-bold pointer-events-none">
@@ -224,15 +222,15 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
               <button
                 type="submit"
                 disabled={isPending}
-                className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative md:col-span-2 justify-self-end mt-8 cursor-pointer"
+                className="group inline-block text-lg hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-500 relative md:col-span-2 justify-self-end mt-8 cursor-pointer"
               >
                 <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-white"></span>
-                <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+                <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
 
                 {isPending ? "RESERVING..." : "RESERVE"}
 
                 <span className="absolute -left-2 -right-2 -bottom-1 h-[2px] bg-white"></span>
-                <span className="absolute -left-2 -right-2 -bottom-1 h-[2px] bg-[#FF2A70] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
+                <span className="absolute -left-2 -right-2 -bottom-1 h-[2px] bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
               </button>
             </div>
 

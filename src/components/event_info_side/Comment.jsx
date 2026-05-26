@@ -6,7 +6,7 @@ import { createComment } from "@/app/actions/comments";
 export default function Comments({ comments, eventId }) {
   const formRef = useRef(null);
 
-  // useActionState tager imod vores action og en start-tilstand (null)
+  // useActionState tager imod vores action (comments.js) og en start-tilstand (null)
   const [state, formAction, isPending] = useActionState(createComment, null);
 
   // Hvis kommentaren blev oprettet successfully, tømmer vi formularen
@@ -62,7 +62,6 @@ export default function Comments({ comments, eventId }) {
             required
           />
 
-          {/* Email var ikke et krav i din opgavebeskrivelse til API-payloadet, men du kan beholde det i HTML */}
           <input
             id="email"
             type="email"
@@ -92,13 +91,13 @@ export default function Comments({ comments, eventId }) {
             <button
               type="submit"
               disabled={isPending}
-              className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative cursor-pointer disabled:opacity-50"
+              className="group inline-block text-lg hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-500 relative cursor-pointer disabled:opacity-50"
             >
               <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-white"></span>
-              <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+              <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
               {isPending ? "SUBMITTING..." : "SUBMIT"}
               <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-white"></span>
-              <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
+              <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
             </button>
           </div>
         </form>
