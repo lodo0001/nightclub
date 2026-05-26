@@ -28,7 +28,7 @@ const WelcomeToNightClub = () => {
 
             {/* ikon i midten */}
             <img
-              src="/assets/icon/favicon.png"
+              src="/assets/icon/favicon.webp"
               alt="night club icon"
               className="border border-[oklch(65.35%_0.2419_9.27)] w-12 h-12 p-2 mb-4"
             />

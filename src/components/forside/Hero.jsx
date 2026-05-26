@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const images = ["/assets/bg/header_bg_1.jpg", "/assets/bg/header_bg_2.jpg"];
+const images = ["/assets/bg/header_bg_1.webp", "/assets/bg/header_bg_2.webp"];
 
 const Hero = () => {
   const [stage, setStage] = useState("intro");
@@ -52,7 +52,7 @@ const Hero = () => {
       <div className="relative z-10 h-full w-full flex items-center justify-center">
         <div className="relative flex flex-col items-center perspective-[1000px]">
           <motion.img
-            src="/assets/icon/HeroLogo.png"
+            src="/assets/icon/HeroLogo.webp"
             alt="hero logo"
             className="h-20 w-auto"
             initial={{ rotateX: 90, opacity: 0 }}
@@ -72,13 +72,13 @@ const Hero = () => {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="/assets/icon/tagline.png"
+                src="/assets/icon/tagline.webp"
                 alt="tagline"
                 className="h-10 w-auto"
               />
 
               <img
-                src="/assets/bottom_line2.png"
+                src="/assets/bottom_line2.webp"
                 alt="line"
                 className="h-10 w-auto mt-2"
               />

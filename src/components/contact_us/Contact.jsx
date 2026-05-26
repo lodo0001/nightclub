@@ -44,15 +44,15 @@ const ContactUs = () => {
             <button
               type="submit"
               disabled={isPending}
-              className="self-end group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative cursor-pointer"
+              className="self-end group inline-block text-lg hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-500 relative cursor-pointer"
             >
               <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-white"></span>
-              <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+              <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
 
               {isPending ? "SENDING..." : "SEND"}
 
               <span className="absolute -left-2 -right-2 -bottom-1 h-[2px] bg-white"></span>
-              <span className="absolute -left-2 -right-2 -bottom-1 h-[2px] bg-[#FF2A70] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
+              <span className="absolute -left-2 -right-2 -bottom-1 h-[2px] bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
             </button>
           </div>
         </form>

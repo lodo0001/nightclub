@@ -28,8 +28,8 @@ const Info = ({ event }) => {
     <div>
       <div className="relative h-[38vh] md:h-[45vh] overflow-hidden">
         <Image
-          src={event?.heroAsset?.url || "/assets/content-img/blog_full1.jpg"}
-          alt={event?.heroAsset?.alt || event?.title}
+          src={event?.heroAsset?.url}
+          alt={event?.heroAsset?.alt}
           fill
           priority
           className="object-cover"
@@ -55,12 +55,12 @@ const Info = ({ event }) => {
               {event?.content}
             </p>
             <Link href={`/booking?eventId=${event?.id}`}>
-              <button className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative cursor-pointer mt-10 ml-3">
+              <button className="group inline-block text-lg hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-500 relative cursor-pointer mt-10 ml-3">
                 <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-white"></span>
-                <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+                <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
                 BOOK NOW
                 <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-white"></span>
-                <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
+                <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
               </button>
             </Link>
           </div>
@@ -140,7 +140,7 @@ const Info = ({ event }) => {
                     </span>
 
                     <img
-                      src="/assets/content-img/blog_full1.jpg"
+                      src="/assets/content-img/blog_full1.webp"
                       alt={item.label}
                       className="w-16 h-16 object-cover rounded-md ml-auto"
                     />
