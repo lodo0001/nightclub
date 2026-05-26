@@ -94,6 +94,19 @@ const Hero = () => {
                   </button>
                 </Link>
               </div>
+              <div>
+                <img
+                  src="/assets/icon/botton_arrow1.png"
+                  alt="botton arrow"
+                  className="h-5 w-auto rotate-90 mt-15 cursor-pointer"
+                  onClick={() =>
+                    window.scrollTo({
+                      top: window.innerHeight,
+                      behavior: "smooth",
+                    })
+                  }
+                />
+              </div>
             </motion.div>
           )}
         </div>
