@@ -11,7 +11,7 @@ export default function EventCard({ events }) {
 
   const currentEvents = events.slice(
     (page - 1) * eventsPerPage,
-    page * eventsPerPage
+    page * eventsPerPage,
   );
 
   const formatDate = (dateString) => {

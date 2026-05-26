@@ -26,17 +26,16 @@ const formatTime = (dateString) => {
 const Info = ({ event }) => {
   return (
     <div>
-      <div className="relative h-[38vh] md:h-[45vh] overflow-hidden">
-        <Image
-          src={event?.heroAsset?.url}
-          alt={event?.heroAsset?.alt}
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
-
       <div className="max-w-300 mx-auto px-4 sm:px-6 md:px-8 pt-15">
+        <div className="relative h-full md:h-[60vh] overflow-hidden mb-9">
+          <Image
+            src={event?.heroAsset?.url}
+            alt={event?.heroAsset?.alt}
+            fill
+            priority
+            className="object-cover "
+          />
+        </div>
         <h1 className="text-4xl font-bold tracking-[0.02em] uppercase">
           {event?.title}
         </h1>
@@ -65,9 +64,10 @@ const Info = ({ event }) => {
             </Link>
           </div>
           <div className="md:pl-10 bg-[oklch(65.35%_0.2419_9.27)] rounded-lg flex flex-col justify-center py-10 px-6 h-fit">
-            <div className="flex items-center gap-3 mt-5 mb-2">
+            <div className="w-full border-t border-white py-1 mb-4"></div>
+            <div className="flex items-center gap-3 mb-2 ">
               <SlLocationPin />
-              <h3 className="uppercase tracking-[0.02em] font-bold text-lg ">
+              <h3 className="uppercase tracking-[0.02em] font-bold text-lg">
                 {event?.location}
               </h3>
             </div>
@@ -79,7 +79,7 @@ const Info = ({ event }) => {
               </h3>
             </div>
 
-            <div className="flex gap-12 mt-8 tracking-[0.02em] font-bold">
+            <div className="flex gap-12 mt-8 tracking-[0.02em] font-bold w-full border-b border-white py-1">
               <div className="mb-5">
                 <h3 className="uppercase text-lg text-gray-300">Doors open</h3>
                 <h3 className="uppercase text-lg">
@@ -97,7 +97,7 @@ const Info = ({ event }) => {
                 <h3 className="uppercase text-lg">{event?.price}</h3>
 
                 <h3 className="uppercase text-lg mt-6 text-gray-300">Age</h3>
-                <h3 className="uppercase text-lg">{event?.ageLimit}</h3>
+                <h3 className="uppercase text-lg ">{event?.ageLimit}</h3>
               </div>
             </div>
           </div>
@@ -108,16 +108,23 @@ const Info = ({ event }) => {
             <h3 className="uppercase font-bold tracking-[0.02em] text-2xl text-gray-500">
               Line up
             </h3>
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {event?.lineup?.map((artist, index) => (
                 <div
                   key={index}
-                  className="bg-[oklch(53.17%_0.1971_9.42)] rounded-lg p-6 text-center"
+                  className="relative h-40 w-full overflow-hidden rounded-md group"
                 >
-                  <h4 className="text-lg tracking-[0.02em] font-bold uppercase">
-                    {artist}
-                  </h4>
+                  <img
+                    src="/assets/content-img/blog_full1.webp"
+                    alt={artist}
+                    className="w-full h-full object-cover"
+                  />
+
+                  <div className="absolute bottom-0 left-0 w-full bg-to-t from-black/80 via-black/40 to-transparent p-4 text-center">
+                    <h4 className="text-lg tracking-[0.02em] font-bold uppercase text-white">
+                      {artist}
+                    </h4>
+                  </div>
                 </div>
               ))}
             </div>
