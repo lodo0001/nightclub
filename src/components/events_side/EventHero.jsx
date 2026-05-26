@@ -12,7 +12,7 @@ const EventHero = () => {
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 md:gap-4 lg:gap-6">
         <h1 className="text-xl md:text-2xl lg:text-4xl font-bold">EVENTS</h1>
 
-        <div className="h-[2px] w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
+        <div className="h-0.5 w-24 md:w-40 lg:w-64 bg--to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
     </div>
   );
