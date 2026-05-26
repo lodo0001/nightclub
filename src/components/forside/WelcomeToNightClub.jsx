@@ -5,7 +5,7 @@ const WelcomeToNightClub = () => {
   return (
     <div className="grid justify-center m-15">
       <div className="grid justify-items-center m-10">
-        <h1 className="font-extrabold text-md md:text-xl lg:text-2xl whitespace-nowrap">
+        <h1 className="font-extrabold text-md md:text-xl lg:text-2xl 2xl:text-3xl whitespace-nowrap">
           WELCOME TO NIGHT CLUB
         </h1>
         <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
@@ -15,9 +15,9 @@ const WelcomeToNightClub = () => {
         {/* KORT 1: NiGHT CLUB */}
         <div className="relative group overflow-hidden">
           <img
-            src="/assets/content-img/thumb1.jpg"
+            src="/assets/content-img/thumb1.webp"
             alt="club"
-            className="w-full object-cover"
+            className="w-full object-cover "
           />
 
           {/* Når man hover */}
@@ -46,9 +46,9 @@ const WelcomeToNightClub = () => {
         {/* KORT 2: RESTAURANT */}
         <div className="relative group overflow-hidden">
           <img
-            src="/assets/content-img/reasturant_1.jpg"
+            src="/assets/content-img/reasturant_1.webp"
             alt="restaurant"
-            className="w-93 object-cover"
+            className="w-93 object-cover "
           />
 
           {/* Når man hover */}
@@ -73,7 +73,7 @@ const WelcomeToNightClub = () => {
         {/* KORT 3: BAR */}
         <div className="relative group overflow-hidden">
           <img
-            src="/assets/content-img/thumb2.jpg"
+            src="/assets/content-img/thumb2.webp"
             alt="bar"
             className="w-full object-cover"
           />

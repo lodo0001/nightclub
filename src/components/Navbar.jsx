@@ -23,9 +23,13 @@ export const Navbar = () => {
 
   return (
     <header className="sticky top-0 left-0 w-full z-50 bg-black border-t border-b border-[oklch(65.35%_0.2419_9.27)] pink-corners relative">
-      <nav className="flex items-center justify-between py-6 px-6 md:px-20">
+      <nav className="max-w-300 mx-auto flex items-center justify-between py-8 px-4 sm:px-6 md:py-6 md:px-8">
         <Link href="/">
-          <img src="/assets/Logo.png" alt="Logo" className="h-8 w-auto" />
+          <img
+            src="/assets/Logo.webp"
+            alt="Logo"
+            className="h-6 w-auto md:h-8 2xl:h-10"
+          />
         </Link>
 
         {/* Kode til computer*/}
@@ -111,7 +115,7 @@ const Links = ({
       whileHover="hovered"
       href={href}
       onMouseEnter={onMouseEnter}
-      className="relative block whitespace-nowrap text-lg font-medium"
+      className="relative block whitespace-nowrap font-medium md:text-xl 2xl:text-2xl"
     >
       <div className="relative overflow-hidden">
         <div>

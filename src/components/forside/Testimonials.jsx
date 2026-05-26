@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { AiOutlineFacebook } from "react-icons/ai";
-import { LiaTwitterSquare } from "react-icons/lia";
+import { GrFacebookOption } from "react-icons/gr";
+import { GrSnapchat } from "react-icons/gr";
+import { FaTwitter } from "react-icons/fa";
 
 const Testimonials = ({ testimonials }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -23,10 +24,14 @@ const Testimonials = ({ testimonials }) => {
 
   if (!testimonials) return <p>Loading...</p>;
 
+  const soMeLinks = {
+    snapchat: "https://snapchat.com",
+  };
+
   return (
     <div className="relative overflow-hidden py-16">
       <img
-        src="/assets/bg/footerbg.jpg"
+        src="/assets/bg/footerbg.webp"
         className="absolute inset-0 w-full h-full object-cover opacity-10"
       />
 
@@ -49,18 +54,32 @@ const Testimonials = ({ testimonials }) => {
                   </h2>
                   <p>{testimonials.content}</p>
 
-                  <div className="flex justify-center items-center gap-3 mt-3">
+                  <div className="flex gap-5 justify-center mt-5">
                     <a href={testimonials.facebook}>
-                      <AiOutlineFacebook
-                        size={30}
-                        className=" hover:text-[oklch(65.35%_0.2419_9.27)] "
-                      />
+                      <div className="group h-8 w-8 border  flex items-center justify-center cursor-pointer transition hover:border-[oklch(65.35%_0.2419_9.27)]">
+                        <GrFacebookOption
+                          size={23}
+                          className="text-white transition group-hover:text-[oklch(65.35%_0.2419_9.27)]"
+                        />
+                      </div>
                     </a>
+
                     <a href={testimonials.twitter}>
-                      <LiaTwitterSquare
-                        size={34}
-                        className=" hover:text-[oklch(65.35%_0.2419_9.27)] "
-                      />
+                      <div className="group h-8 w-8 border flex items-center justify-center cursor-pointer transition hover:border-[oklch(65.35%_0.2419_9.27)]">
+                        <FaTwitter
+                          size={18}
+                          className="text-white transition group-hover:text-[oklch(65.35%_0.2419_9.27)]"
+                        />
+                      </div>
+                    </a>
+
+                    <a href={soMeLinks.snapchat}>
+                      <div className="group h-8 w-8 border  flex items-center justify-center cursor-pointer transition hover:border-[oklch(65.35%_0.2419_9.27)]">
+                        <GrSnapchat
+                          size={18}
+                          className="text-white transition group-hover:text-[oklch(65.35%_0.2419_9.27)]"
+                        />
+                      </div>
                     </a>
                   </div>
                 </div>

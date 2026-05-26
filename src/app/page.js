@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/forside/Hero";
 
 export default async function Home() {
+  try {
   const [resTestimonials, resEvents, resGallery] = await Promise.all([
     fetch(`${process.env.DATA_API}/testimonials`),
     fetch(`${process.env.DATA_API}/events`),
@@ -50,4 +51,17 @@ export default async function Home() {
       <Footer />
     </div>
   );
+} catch (error) {
+    console.error(error);
+
+    return (
+      <div>
+        <Navbar />
+
+        <div style={{ padding: "2rem", textAlign: "center" }}>
+          <h2>An error occurred. Please try again later :(</h2>
+        </div>
+      </div>
+    );
+  }
 }
