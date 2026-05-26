@@ -50,7 +50,7 @@ export default function EventCard({ events }) {
                   className="w-full h-72 md:h-110 object-cover cursor-pointer"
                 />
               </div>
-              <div className="px-4 md:pr-25 md:pl-8 flex flex-col justify-between pb-6 md:pb-0">
+              <div className="px-4 md:pr-25 md:pl-8 pb-6 md:pb-0">
                 <div>
                   <h2 className="text-xl font-bold tracking-[0.02em] mb-2 mt-6 md:mt-10 text-left">
                     {event.title}
@@ -84,7 +84,7 @@ export default function EventCard({ events }) {
             </>
           ) : (
             <>
-              <div className="px-4 md:pl-30 md:pr-8 flex flex-col justify-between order-2 md:order-1 pb-6 md:pb-0">
+              <div className="px-4 md:pl-30 md:pr-8 order-2 md:order-1 pb-6 md:pb-0">
                 <div>
                   <h2 className="text-xl font-bold tracking-[0.02em] mb-2 mt-6 md:mt-10 text-left">
                     {event.title}
