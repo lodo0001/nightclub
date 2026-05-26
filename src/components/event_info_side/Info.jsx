@@ -28,11 +28,11 @@ const Info = ({ event }) => {
     <div>
       <div className="relative h-[38vh] md:h-[45vh] overflow-hidden">
         <Image
-          src={event?.asset?.url || "/assets/content-img/blog_full1.jpg"}
-          alt={event?.asset?.alt || event?.title}
+          src={event?.heroAsset?.url || "/assets/content-img/blog_full1.jpg"}
+          alt={event?.heroAsset?.alt || event?.title}
           fill
           priority
-          className="object-cover object-center "
+          className="object-cover"
         />
       </div>
 

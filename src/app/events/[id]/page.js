@@ -19,8 +19,8 @@ export default async function EventPage({ params }) {
 
     const eventData = await res.json();
 
-    if (eventData.asset) {
-      eventData.asset.url = `${process.env.DATA_API}${eventData.asset.url}`;
+    if (eventData.heroAsset) {
+      eventData.heroAsset.url = `${process.env.DATA_API}${eventData.heroAsset.url}`;
     }
 
     const comments = eventData.comments || [];
