@@ -1,6 +1,5 @@
 "use client";
-import { useState } from "react";
-import { useActionState } from "react";
+import { useState, useActionState, useEffect } from "react";
 import { reservationsAction } from "@/app/actions/reservations";
 
 const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
@@ -19,6 +18,17 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
     phone: "",
     comment: "",
   });
+
+  useEffect(() => {
+    if (chosenEvent) {
+      setFormData((prev) => ({
+        ...prev,
+        eventId: chosenEvent.id.toString(),
+        date: chosenEvent.date.split("T")[0],
+        table: "", // Nulstil bord hvis de skifter event
+      }));
+    }
+  }, [chosenEvent]);
 
   const tableSize = (num) => {
     if ([1, 2, 4, 6, 7, 9, 11, 12, 14].includes(num))
@@ -61,7 +71,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
     .map((res) => res.table.toString());
 
   return (
-    <div className="w-full -mt-34 px-4 sm:px-8 md:px-8">
+    <div className="w-full mt-20 px-4 sm:px-8 md:px-8">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8">
         <form action={formAction}>
           <div>

@@ -1,6 +1,7 @@
 import { SlLocationPin } from "react-icons/sl";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -25,15 +26,15 @@ const formatTime = (dateString) => {
 const Info = ({ event }) => {
   return (
     <div>
-      <img
-        src={
-          event?.asset?.url
-            ? `https://night-club-z4oy.onrender.com${event.asset.url}`
-            : "/assets/content-img/blog_full1.jpg"
-        }
-        alt={event?.asset?.alt || event?.title}
-        className="w-500 h-130 object-cover max-w-300 mx-auto px-4 sm:px-6 md:px-8 pt-20"
-      />
+      <div className="relative h-[38vh] md:h-[45vh] overflow-hidden">
+        <Image
+          src={event?.asset?.url || "/assets/content-img/blog_full1.jpg"}
+          alt={event?.asset?.alt || event?.title}
+          fill
+          priority
+          className="object-cover object-center "
+        />
+      </div>
 
       <div className="max-w-300 mx-auto px-4 sm:px-6 md:px-8 pt-15">
         <h1 className="text-4xl font-bold tracking-[0.02em] uppercase">
@@ -53,7 +54,7 @@ const Info = ({ event }) => {
             <p className="tracking-[0.02em] mt-5 text-gray-300">
               {event?.content}
             </p>
-            <Link href={`/events/${event.slug}`}>
+            <Link href={`/booking?eventId=${event?.id}`}>
               <button className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative cursor-pointer mt-10 ml-3">
                 <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-white"></span>
                 <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
@@ -112,7 +113,7 @@ const Info = ({ event }) => {
               {event?.lineup?.map((artist, index) => (
                 <div
                   key={index}
-                  className="bg-[oklch(65.35%_0.2419_9.27)] rounded-lg p-6 text-center"
+                  className="bg-[oklch(53.17%_0.1971_9.42)] rounded-lg p-6 text-center"
                 >
                   <h4 className="text-lg tracking-[0.02em] font-bold uppercase">
                     {artist}
@@ -130,7 +131,7 @@ const Info = ({ event }) => {
                 {event?.schedule?.map((item, index) => (
                   <li
                     key={index}
-                    className="grid grid-cols-[80px_1fr_100px] items-center gap-4 text-gray-200 bg-[oklch(65.35%_0.2419_9.27)] rounded-lg py-5 px-6"
+                    className="grid grid-cols-[80px_1fr_100px] items-center gap-4 text-gray-200 bg-[oklch(53.17%_0.1971_9.42)] rounded-lg py-5 px-6"
                   >
                     <span className="font-bold text-xl">{item.time}</span>
 
@@ -139,7 +140,7 @@ const Info = ({ event }) => {
                     </span>
 
                     <img
-                      src={item.image || "/assets/content-img/blog_full1.jpg"}
+                      src="/assets/content-img/blog_full1.jpg"
                       alt={item.label}
                       className="w-16 h-16 object-cover rounded-md ml-auto"
                     />

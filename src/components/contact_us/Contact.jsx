@@ -7,7 +7,10 @@ const ContactUs = () => {
   return (
     <div className="max-w-[1200px] mx-auto">
       <div className="grid">
-        <form action={formAction} className="grid gap-4 justify-center -mt-32">
+        <form
+          action={formAction}
+          className="grid gap-4 justify-center mt-20 mb-20"
+        >
           <div>
             <input
               id="name"

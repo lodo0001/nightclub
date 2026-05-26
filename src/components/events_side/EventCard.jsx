@@ -11,7 +11,7 @@ export default function EventCard({ events }) {
 
   const currentEvents = events.slice(
     (page - 1) * eventsPerPage,
-    page * eventsPerPage,
+    page * eventsPerPage
   );
 
   const formatDate = (dateString) => {
@@ -35,8 +35,7 @@ export default function EventCard({ events }) {
   };
 
   return (
-    <div className="-mt-30" ref={sectionRef}>
-      <div></div>{" "}
+    <div className="mt-15" ref={sectionRef}>
       {currentEvents.map((event, index) => (
         <div key={event.id} className="grid grid-cols-2">
           {index % 2 === 0 ? (
@@ -66,7 +65,7 @@ export default function EventCard({ events }) {
                 </p>
                 <p>{event.description}</p>
                 <div className="justify-end flex">
-                  <Link href={`/events/${event.slug}`}>
+                  <Link href={`/events/${event.id}`}>
                     <button className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative cursor-pointer mt-30">
                       <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-white"></span>
                       <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
@@ -98,7 +97,7 @@ export default function EventCard({ events }) {
                 </p>
                 <p>{event.description}</p>
                 <div className="justify-end flex">
-                  <Link href={`/events/${event.slug}`}>
+                  <Link href={`/events/${event.id}`}>
                     <button className="group inline-block text-lg hover:text-[#FF2A70] transition-colors duration-500 relative cursor-pointer mt-30">
                       <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-white"></span>
                       <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[#FF2A70] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
@@ -134,7 +133,7 @@ export default function EventCard({ events }) {
               <button
                 key={pageNumber}
                 onClick={() => changePage(pageNumber)}
-                className="relative text-lg cursor-pointer"
+                className="relative text-lg cursor-pointer "
               >
                 {pageNumber}
 

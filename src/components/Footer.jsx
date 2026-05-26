@@ -11,13 +11,13 @@ const soMeLinks = {
 const Footer = () => {
   return (
     <footer className="relative w-full overflow-hidden text-sm">
-      <div className="absolute inset-0 bg-[url('/assets/bg/footerbg.jpg')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('/assets/bg/footerbg.webp')] bg-cover bg-center opacity-10"></div>
 
       <div className="relative max-w-300 mx-auto px-4 sm:px-6 md:px-8 pt-20">
         <div className="grid grid-cols-3 items-start mb-20 gap-16">
           <div>
             <img
-              src="/assets/Logo.png"
+              src="/assets/Logo.webp"
               alt="logo"
               className="h-8 w-auto mb-5"
             />
