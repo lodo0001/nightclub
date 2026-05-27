@@ -58,10 +58,15 @@ const ContactUs = () => {
         </form>
 
         {state?.error && (
-          <p className="text-red-500 text-center mt-9">{state.error}</p>
+          <p className="text-red-500 text-center text-sm sm:text-base px-4 max-w-md mx-auto leading-relaxed break-words">
+            {state.error}
+          </p>
         )}
+
         {state?.success && (
-          <p className="text-green-500 text-center mt-9">{state.success}</p>
+          <p className="text-green-500 text-center text-sm sm:text-base px-4 max-w-md mx-auto leading-relaxed break-words -mt-10 mb-10">
+            {state.success}
+          </p>
         )}
       </div>
     </div>

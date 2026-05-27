@@ -37,7 +37,6 @@ export default async function Home({ searchParams }) {
       </div>
     );
   } catch {
-    // Simpel fejl-visning hvis noget går galt
     return (
       <div>
         <Navbar />

@@ -7,7 +7,7 @@ const Newsletter = () => {
   const [state, formAction, isPending] = useActionState(NewsletterAction, null);
 
   return (
-    <div className="grid justify-center mt-15">
+    <div className="grid justify-center mt-15 mb-10">
       <div>
         <h2 className="font-extrabold text-1xl uppercase text-center">
           Want the latest night club news?
