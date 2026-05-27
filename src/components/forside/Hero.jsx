@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { IoIosArrowDown } from "react-icons/io";
 
 const images = ["/assets/bg/header_bg_1.webp", "/assets/bg/header_bg_2.webp"];
 
@@ -95,10 +96,9 @@ const Hero = () => {
                 </Link>
               </div>
               <div>
-                <img
-                  src="/assets/icon/botton_arrow1.png"
-                  alt="botton arrow"
-                  className="h-5 w-auto rotate-90 mt-15 cursor-pointer"
+                <IoIosArrowDown
+                  size={40}
+                  className=" mt-15 cursor-pointer hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-300"
                   onClick={() =>
                     window.scrollTo({
                       top: window.innerHeight,
