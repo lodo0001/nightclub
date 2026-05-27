@@ -14,15 +14,16 @@ const Footer = () => {
       <div className="absolute inset-0 bg-[url('/assets/bg/footerbg.webp')] bg-cover bg-center opacity-10"></div>
 
       <div className="relative max-w-300 mx-auto px-4 sm:px-6 md:px-8 pt-20">
-        <div className="grid grid-cols-3 items-start mb-20 gap-16">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 items-start mb-20 gap-16 text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start">
             <img
               src="/assets/Logo.webp"
               alt="logo"
               className="h-8 w-auto mb-5"
             />
 
-            <h2 className="text-[oklch(65.35%_0.2419_9.27)] tracking-[0.02em]">
+            {/* ÆNDRET: Større og fed på mobil, falder tilbage til standard text-sm på desktop */}
+            <h2 className="text-[oklch(65.35%_0.2419_9.27)] text-lg font-semibold md:text-sm md:font-normal tracking-[0.02em]">
               LOCATION
             </h2>
 
@@ -31,7 +32,8 @@ const Footer = () => {
               1265 København K
             </p>
 
-            <h2 className="text-[oklch(65.35%_0.2419_9.27)] tracking-[0.02em]">
+            {/* ÆNDRET: Større og fed på mobil, falder tilbage til standard text-sm på desktop */}
+            <h2 className="text-[oklch(65.35%_0.2419_9.27)] text-lg font-semibold md:text-sm md:font-normal tracking-[0.02em]">
               OPENING HOURS
             </h2>
 
@@ -41,7 +43,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div>
+          <div className="hidden md:flex flex-col items-start">
             <h2 className="text-[oklch(65.35%_0.2419_9.27)] tracking-[0.02em] mb-5">
               NEWS
             </h2>
@@ -79,7 +81,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="hidden md:flex flex-col items-start">
             <h2 className="text-[oklch(65.35%_0.2419_9.27)] tracking-[0.02em] mb-5">
               RECENT POSTS
             </h2>
@@ -108,10 +110,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 items-center mb-7">
-          <p className="text-gray-500">Night Club - All Rights Reserved</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center mb-7 gap-6 text-center md:text-left">
+          <p className="text-gray-500 order-2 md:order-1">
+            Night Club - All Rights Reserved
+          </p>
 
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-3 order-1 md:order-2 font-bold">
             <p>Stay Connected With Us</p>
 
             <div className="flex gap-5 justify-center">
@@ -144,7 +148,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <p className="text-gray-500 text-right">Copyright © NightClub</p>
+          <p className="text-gray-500 md:text-right order-3">
+            Copyright © NightClub
+          </p>
         </div>
       </div>
     </footer>
