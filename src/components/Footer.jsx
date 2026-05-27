@@ -1,11 +1,21 @@
+import { GrFacebookOption } from "react-icons/gr";
+import { GrSnapchat } from "react-icons/gr";
+import { FaInstagram } from "react-icons/fa";
+
+const soMeLinks = {
+  facebook: "https://facebook.com",
+  snapchat: "https://snapchat.com",
+  instagram: "http://instagram.com",
+};
+
 const Footer = () => {
   return (
     <footer className="relative w-full overflow-hidden text-sm">
       <div className="absolute inset-0 bg-[url('/assets/bg/footerbg.webp')] bg-cover bg-center opacity-10"></div>
 
       <div className="relative max-w-300 mx-auto px-4 sm:px-6 md:px-8 pt-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 items-start mb-20 gap-16 text-center md:text-left">
-          <div className="flex flex-col items-center md:items-start">
+        <div className="grid grid-cols-3 items-start mb-20 gap-16">
+          <div>
             <img
               src="/assets/Logo.webp"
               alt="logo"
@@ -31,7 +41,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="hidden md:flex flex-col items-start">
+          <div>
             <h2 className="text-[oklch(65.35%_0.2419_9.27)] tracking-[0.02em] mb-5">
               NEWS
             </h2>
@@ -69,7 +79,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="hidden md:flex flex-col items-start">
+          <div>
             <h2 className="text-[oklch(65.35%_0.2419_9.27)] tracking-[0.02em] mb-5">
               RECENT POSTS
             </h2>
@@ -98,41 +108,43 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 items-center mb-7 gap-6 text-center md:text-left">
-          <p className="text-gray-500 order-2 md:order-1">
-            Night Club - All Rights Reserved
-          </p>
+        <div className="grid grid-cols-3 items-center mb-7">
+          <p className="text-gray-500">Night Club - All Rights Reserved</p>
 
-          <div className="flex flex-col items-center gap-3 order-1 md:order-2">
+          <div className="flex flex-col items-center gap-3">
             <p>Stay Connected With Us</p>
 
             <div className="flex gap-5 justify-center">
-              <div className="h-8 w-8 border border-white flex items-center justify-center cursor-pointer">
-                <img
-                  src="/assets/icon/facebook.png"
-                  className="h-4 w-4 object-contain"
-                />
-              </div>
+              <a href={soMeLinks.facebook}>
+                <div className="group h-8 w-8 border  flex items-center justify-center cursor-pointer transition hover:border-[oklch(65.35%_0.2419_9.27)]">
+                  <GrFacebookOption
+                    size={23}
+                    className="text-white transition group-hover:text-[oklch(65.35%_0.2419_9.27)]"
+                  />
+                </div>
+              </a>
 
-              <div className="h-8 w-8 border border-white flex items-center justify-center cursor-pointer">
-                <img
-                  src="/assets/icon/snap.png"
-                  className="h-4 w-4 object-contain"
-                />
-              </div>
+              <a href={soMeLinks.snapchat}>
+                <div className="group h-8 w-8 border flex items-center justify-center cursor-pointer transition hover:border-[oklch(65.35%_0.2419_9.27)]">
+                  <GrSnapchat
+                    size={18}
+                    className="text-white transition group-hover:text-[oklch(65.35%_0.2419_9.27)]"
+                  />
+                </div>
+              </a>
 
-              <div className="h-8 w-8 border border-white flex items-center justify-center cursor-pointer">
-                <img
-                  src="/assets/icon/insta.png"
-                  className="h-4 w-4 object-contain"
-                />
-              </div>
+              <a href={soMeLinks.instagram}>
+                <div className="group h-8 w-8 border  flex items-center justify-center cursor-pointer transition hover:border-[oklch(65.35%_0.2419_9.27)]">
+                  <FaInstagram
+                    size={22}
+                    className="text-white transition group-hover:text-[oklch(65.35%_0.2419_9.27)]"
+                  />
+                </div>
+              </a>
             </div>
           </div>
 
-          <p className="text-gray-500 md:text-right order-3">
-            Copyright © NightClub
-          </p>
+          <p className="text-gray-500 text-right">Copyright © NightClub</p>
         </div>
       </div>
     </footer>
