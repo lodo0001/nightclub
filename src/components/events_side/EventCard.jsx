@@ -11,7 +11,7 @@ export default function EventCard({ events }) {
 
   const currentEvents = events.slice(
     (page - 1) * eventsPerPage,
-    page * eventsPerPage,
+    page * eventsPerPage
   );
 
   const formatDate = (dateString) => {
@@ -69,7 +69,7 @@ export default function EventCard({ events }) {
                   </p>
                   <p className="text-left">{event.description}</p>
                 </div>
-                <div className="justify-center md:justify-end flex mt-6 md:mt-30">
+                <div className="justify-center md:justify-end flex mt-6 md:mb-20">
                   <Link href={`/events/${event.id}`}>
                     <button className="group inline-block text-lg hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-500 relative cursor-pointer">
                       <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-white"></span>
@@ -103,7 +103,7 @@ export default function EventCard({ events }) {
                   </p>
                   <p className="text-left">{event.description}</p>
                 </div>
-                <div className="justify-center md:justify-end flex mt-6 md:mt-30">
+                <div className="justify-center md:justify-end flex mt-6 md:mb-20">
                   <Link href={`/events/${event.id}`}>
                     <button className="group inline-block text-lg hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-500 relative cursor-pointer">
                       <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-white"></span>

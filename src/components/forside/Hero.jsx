@@ -55,7 +55,7 @@ const Hero = () => {
           <motion.img
             src="/assets/icon/HeroLogo.webp"
             alt="hero logo"
-            className="h-14 md:h-20 w-auto"
+            className="h-12 md:h-20 w-auto "
             initial={{ rotateX: 90, opacity: 0 }}
             animate={stage !== "intro" ? { rotateX: 0, opacity: 1 } : {}}
             transition={{ duration: 1.2, ease: "easeOut" }}
@@ -75,7 +75,7 @@ const Hero = () => {
               <img
                 src="/assets/icon/tagline.webp"
                 alt="tagline"
-                className="h-10 w-auto"
+                className="h-6 w-auto md:h-10"
               />
 
               <img
