@@ -1,4 +1,3 @@
-// komponent til MusicTrack
 "use client";
 
 import { FaStepBackward, FaStepForward } from "react-icons/fa";

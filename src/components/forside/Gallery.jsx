@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useCallback, useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import * as Dialog from "@radix-ui/react-dialog";
-import { MdClose } from "react-icons/md";
 import useEmblaCarousel from "embla-carousel-react";
+import { MdClose } from "react-icons/md";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 
 const Gallery = ({ gallery }) => {

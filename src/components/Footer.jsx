@@ -22,7 +22,6 @@ const Footer = () => {
               className="h-8 w-auto mb-5"
             />
 
-            {/* ÆNDRET: Større og fed på mobil, falder tilbage til standard text-sm på desktop */}
             <h2 className="text-[oklch(65.35%_0.2419_9.27)] text-lg font-semibold md:text-sm md:font-normal tracking-[0.02em]">
               LOCATION
             </h2>
@@ -32,7 +31,6 @@ const Footer = () => {
               1265 København K
             </p>
 
-            {/* ÆNDRET: Større og fed på mobil, falder tilbage til standard text-sm på desktop */}
             <h2 className="text-[oklch(65.35%_0.2419_9.27)] text-lg font-semibold md:text-sm md:font-normal tracking-[0.02em]">
               OPENING HOURS
             </h2>

@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { IoIosArrowDown } from "react-icons/io";
 
 const images = ["/assets/bg/header_bg_1.webp", "/assets/bg/header_bg_2.webp"];
