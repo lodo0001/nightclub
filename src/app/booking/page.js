@@ -7,7 +7,6 @@ export default async function Home({ searchParams }) {
   try {
     const { eventId } = await searchParams;
 
-    // Henter data fra API'et samtidigt
     const [eventsRes, reservationsRes] = await Promise.all([
       fetch(`${process.env.DATA_API}/events`),
       fetch(`${process.env.DATA_API}/reservations`, { cache: "no-store" }),

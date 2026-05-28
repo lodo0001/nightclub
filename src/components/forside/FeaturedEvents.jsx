@@ -15,7 +15,7 @@ const FeaturedEvents = ({ events }) => {
           FEATURED EVENTS
         </h1>
 
-        <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
+        <div className="h-0.5 mt-2 w-24 md:w-40 lg:w-64 bg-linear-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
 
       {/* Events */}
@@ -32,8 +32,8 @@ const FeaturedEvents = ({ events }) => {
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-black/60 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500 pink-corners">
                 {/* Pink border linjer */}
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-[oklch(65.35%_0.2419_9.27)]" />
-                <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[oklch(65.35%_0.2419_9.27)]" />
+                <div className="absolute top-0 left-0 right-0 h-0.75 bg-[oklch(65.35%_0.2419_9.27)]" />
+                <div className="absolute bottom-0 left-0 right-0 h-0.75 bg-[oklch(65.35%_0.2419_9.27)]" />
 
                 {/* Button */}
                 <div className="flex justify-center items-center pt-30">

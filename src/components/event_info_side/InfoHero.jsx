@@ -14,7 +14,7 @@ const InfoHero = ({ event }) => {
           {event?.title || "Event"}
         </h1>
 
-        <div className="h-[2px] w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
+        <div className="h-0.5 w-24 md:w-40 lg:w-64 bg-linear-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 left-0 w-full z-50 bg-black border-t border-b border-[oklch(65.35%_0.2419_9.27)] pink-corners relative">
+    <header className="sticky top-0 left-0 w-full z-50 bg-black border-t border-b border-[oklch(65.35%_0.2419_9.27)] pink-corners">
       <nav className="max-w-300 mx-auto flex items-center justify-between py-8 px-4 sm:px-6 md:py-6 md:px-8">
         <Link href="/">
           <img
@@ -166,7 +166,7 @@ const Links = ({
       {showLine && (
         <motion.div
           layoutId="nav-underline"
-          className="absolute left-0 right-0 bottom-[-8px] h-[2px] bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent"
+          className="absolute left-0 right-0 -bottom-2 h-0.5 bg-linear-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent"
           transition={{
             type: "spring",
             stiffness: 300,

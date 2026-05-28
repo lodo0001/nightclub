@@ -123,7 +123,7 @@ const Info = ({ event }) => {
                     className="w-full h-full object-cover"
                   />
 
-                  <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-center">
+                  <div className="absolute bottom-0 left-0 w-full bg-linear-to-t from-black/80 via-black/40 to-transparent p-4 text-center">
                     <h4 className="text-lg tracking-[0.02em] font-bold uppercase text-white">
                       {artist}
                     </h4>

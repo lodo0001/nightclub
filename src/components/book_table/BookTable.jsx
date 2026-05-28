@@ -72,7 +72,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
 
   return (
     <div className="w-full mt-20 px-4 sm:px-8 md:px-8 mb-20">
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8">
+      <div className="max-w-300 mx-auto px-4 sm:px-6 md:px-8">
         <form action={formAction}>
           <div>
             <h2 className="text-xl font-bold mb-4">CHOOSE AN EVENT:</h2>
@@ -202,7 +202,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 name="numberOfGuests"
                 required
                 onChange={changeInput}
-                className="w-full p-2 border text-white/80 text-white cursor-pointer"
+                className="w-full p-2 border text-white/80 cursor-pointer"
               >
                 <option value="">Chose Number of Guests</option>
                 <option value="4">4 Guests</option>
@@ -224,17 +224,17 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
                 disabled={isPending}
                 className="group inline-block text-lg hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-500 relative md:col-span-2 justify-self-end mt-8 cursor-pointer"
               >
-                <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-white"></span>
-                <span className="absolute -left-2 -right-2 -top-1 h-[2px] bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
+                <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-white"></span>
+                <span className="absolute -left-2 -right-2 -top-1 h-0.5 bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100"></span>
 
                 {isPending ? "RESERVING..." : "RESERVE"}
 
-                <span className="absolute -left-2 -right-2 -bottom-1 h-[2px] bg-white"></span>
-                <span className="absolute -left-2 -right-2 -bottom-1 h-[2px] bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
+                <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-white"></span>
+                <span className="absolute -left-2 -right-2 -bottom-1 h-0.5 bg-[oklch(65.35%_0.2419_9.27)] scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100"></span>
               </button>
             </div>
 
-            <div className="mt-4 min-h-[20px]">
+            <div className="mt-4 min-h-5">
               {state?.error && (
                 <p className="text-red-500 text-md font-bold tracking-wider grid justify-items-center">
                   {state.error}

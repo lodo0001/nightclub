@@ -8,7 +8,7 @@ const WelcomeToNightClub = () => {
         <h1 className="font-extrabold text-md md:text-xl lg:text-2xl 2xl:text-3xl whitespace-nowrap">
           WELCOME TO NIGHT CLUB
         </h1>
-        <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
+        <div className="h-0.5 mt-2 w-24 md:w-40 lg:w-64 bg-linear-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
 
       <div className="grid grid-cols-1 lg:flex gap-6">
@@ -23,8 +23,8 @@ const WelcomeToNightClub = () => {
           {/* Når man hover */}
           <div className="absolute inset-0 bg-black/70 lg:bg-black flex flex-col items-center justify-center p-6 text-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 pink-corners">
             {/* Pink border linjer top og bund */}
-            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[oklch(65.35%_0.2419_9.27)]" />
-            <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[oklch(65.35%_0.2419_9.27)]" />
+            <div className="absolute top-0 left-0 right-0 h-0.75 bg-[oklch(65.35%_0.2419_9.27)]" />
+            <div className="absolute bottom-0 left-0 right-0 h-0.75 bg-[oklch(65.35%_0.2419_9.27)]" />
 
             {/* ikon i midten */}
             <img
@@ -54,8 +54,8 @@ const WelcomeToNightClub = () => {
           {/* Når man hover */}
           <div className="absolute inset-0 bg-black/70 lg:bg-black flex flex-col items-center justify-center p-6 text-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 pink-corners">
             {/* Pink border linjer top og bund */}
-            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[oklch(65.35%_0.2419_9.27)]" />
-            <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[oklch(65.35%_0.2419_9.27)]" />
+            <div className="absolute top-0 left-0 right-0 h-0.75 bg-[oklch(65.35%_0.2419_9.27)]" />
+            <div className="absolute bottom-0 left-0 right-0 h-0.75 bg-[oklch(65.35%_0.2419_9.27)]" />
 
             {/* ikon i midten */}
             <IoRestaurant className="border border-[oklch(65.35%_0.2419_9.27)] w-12 h-12 p-2 mb-4 text-[oklch(65.35%_0.2419_9.27)]" />
@@ -81,8 +81,8 @@ const WelcomeToNightClub = () => {
           {/* Når man hover */}
           <div className="absolute inset-0 bg-black/70 lg:bg-black flex flex-col items-center justify-center p-6 text-center opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 pink-corners">
             {/* Pink border linjer top og bund */}
-            <div className="absolute top-0 left-0 right-0 h-[3px] bg-[oklch(65.35%_0.2419_9.27)]" />
-            <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[oklch(65.35%_0.2419_9.27)]" />
+            <div className="absolute top-0 left-0 right-0 h-0.75 bg-[oklch(65.35%_0.2419_9.27)]" />
+            <div className="absolute bottom-0 left-0 right-0 h-0.75 bg-[oklch(65.35%_0.2419_9.27)]" />
 
             {/* ikon i midten */}
             <BiSolidDrink className="border border-[oklch(65.35%_0.2419_9.27)] w-12 h-12 p-2 mb-4 text-[oklch(65.35%_0.2419_9.27)]" />

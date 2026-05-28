@@ -39,7 +39,7 @@ const Gallery = ({ gallery }) => {
         <h1 className="font-extrabold text-md md:text-xl lg:text-2xl 2xl:text-3xl whitespace-nowrap">
           NIGHT CLUB GALLERY
         </h1>
-        <div className="h-[2px] mt-2 w-24 md:w-40 lg:w-64 bg-gradient-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
+        <div className="h-0.5 mt-2 w-24 md:w-40 lg:w-64 bg-linear-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
 
       <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
@@ -58,7 +58,7 @@ const Gallery = ({ gallery }) => {
             return (
               <motion.div
                 key={img.id}
-                className={`group relative overflow-hidden h-[300px] md:h-auto ${layouts[index]}`}
+                className={`group relative overflow-hidden h-75 md:h-auto ${layouts[index]}`}
                 initial={{ opacity: 0, x: -200 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -88,7 +88,7 @@ const Gallery = ({ gallery }) => {
         <Dialog.Portal>
           <Dialog.Overlay className="fixed inset-0 bg-black/70 z-50" />
 
-          <Dialog.Content className="fixed left-1/2 top-1/2 w-[85vw] max-w-[700px] -translate-x-1/2 -translate-y-1/2 bg-black p-6 z-50 rounded-lg text-white md:block overflow-visible">
+          <Dialog.Content className="fixed left-1/2 top-1/2 w-[85vw] max-w-175 -translate-x-1/2 -translate-y-1/2 bg-black p-6 z-50 rounded-lg text-white md:block overflow-visible">
             <button
               onClick={scrollPrev}
               className="absolute left-2 md:-left-16 top-1/2 -translate-y-1/2 rotate-180 transition transform hover:scale-110 z-50"
@@ -116,7 +116,7 @@ const Gallery = ({ gallery }) => {
                     key={img.id}
                     className="flex-[0_0_100%] min-w-0 relative flex flex-col items-center"
                   >
-                    <div className="relative w-full h-[350px] md:h-[450px]">
+                    <div className="relative w-full h-87.5 md:h-112.5">
                       <Image
                         src={img.asset.url}
                         alt={img.asset.alt}

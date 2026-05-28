@@ -41,7 +41,7 @@ const Testimonials = ({ testimonials }) => {
             {testimonials.map((testimonials) => (
               <div
                 key={testimonials.id}
-                className="min-w-full flex justify-center p-6 min-h-[350px]"
+                className="min-w-full flex justify-center p-6 min-h-87.5"
               >
                 <div className="w-full max-w-3xl p-6 text-center">
                   <img

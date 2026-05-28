@@ -9,7 +9,7 @@ export default function TrackGallery({ tracks, currentIndex, onSelect }) {
           <img
             src={tracks[currentIndex].image}
             alt={tracks[currentIndex].title}
-            className="w-full max-w-[350px]"
+            className="w-full max-w-87.5"
           />
 
           <p className="text-center font-bold mt-4">
