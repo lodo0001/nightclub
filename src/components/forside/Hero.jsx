@@ -97,7 +97,7 @@ const Hero = () => {
               </div>
               <div>
                 <IoIosArrowDown
-                  size={40}
+                  size={50}
                   className=" mt-15 cursor-pointer hover:text-[oklch(65.35%_0.2419_9.27)] transition-colors duration-300"
                   onClick={() =>
                     window.scrollTo({
