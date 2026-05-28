@@ -19,21 +19,16 @@ import {
 const MusicTrack = () => {
   const audioRef = useRef(null);
 
-  // TRACK STATE
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentTrack = tracks[currentIndex];
 
-  // PLAY STATE
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // TIME STATE
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
-  // VOLUME STATE
   const [volume, setVolume] = useState(1);
 
-  // PLAY / PAUSE
   const pauseOrPlay = () => {
     if (!audioRef.current) return;
 
@@ -46,7 +41,6 @@ const MusicTrack = () => {
     setIsPlaying(!isPlaying);
   };
 
-  // NEXT TRACK
   const nextTrack = () => {
     setCurrentIndex((prev) => {
       const newIndex = prev + 1;
@@ -55,7 +49,6 @@ const MusicTrack = () => {
     });
   };
 
-  // PREVIOUS TRACK
   const prevTrack = () => {
     setCurrentIndex((prev) => {
       const newIndex = prev - 1;
@@ -64,7 +57,6 @@ const MusicTrack = () => {
     });
   };
 
-  // AUTO LOAD NEW TRACK
   useEffect(() => {
     if (!audioRef.current) return;
 
@@ -75,28 +67,23 @@ const MusicTrack = () => {
     }
   }, [currentIndex]);
 
-  // UPDATE CURRENT TIME
   const MusicPlayingTime = () => {
     setCurrentTime(audioRef.current.currentTime);
   };
 
-  // GET DURATION
   const DOMLoadedMusic = () => {
     setDuration(audioRef.current.duration);
   };
 
-  // FORMAT TIME
   const TimeInMinAndSec = (time) => {
     if (!time) return "0:00";
 
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
 
-    // 10 betyder, hvis sekunder er mindre end 10, så tilføj et 0 bag på,
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   };
 
-  // VOLUME CONTROL
   const VolumeControlChange = (e) => {
     const value = Number(e.target.value);
 
@@ -105,7 +92,6 @@ const MusicTrack = () => {
     audioRef.current.volume = value;
   };
 
-  // VOLUME ICON
   const getVolumeIcon = () => {
     if (volume === 0) {
       return <BsFillVolumeMuteFill size={30} className="text-white" />;
@@ -120,7 +106,6 @@ const MusicTrack = () => {
 
   return (
     <div className="grid justify-center m-15 ">
-      {/* HEADER */}
       <div className="grid justify-items-center m-1">
         <h1 className="font-extrabold text-md md:text-xl lg:text-2xl 2xl:text-3xl whitespace-nowrap">
           NIGHT CLUB TRACK
@@ -128,23 +113,18 @@ const MusicTrack = () => {
         <div className="h-0.5 mt-2 w-24 md:w-40 lg:w-64 bg-linear-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
 
-      {/* Main indhold */}
       <div className="flex flex-col lg:flex-row  gap-10 mt-10">
-        {/* TRACK IMAGE */}
         <img
           src={currentTrack.image}
           alt={currentTrack.title}
           className="hidden lg:block"
         />
 
-        {/* RIGHT SIDE */}
         <div className="flex flex-col gap-6">
-          {/* TRACK TITLE */}
           <h2 className="text-xl text-center lg:text-left font-bold">
             {currentTrack.title}
           </h2>
 
-          {/* PROGRESS BAR */}
           <ProgressBar
             currentTime={currentTime}
             duration={duration}
@@ -156,16 +136,13 @@ const MusicTrack = () => {
             TimeInMinAndSec={TimeInMinAndSec}
           />
 
-          {/* BOTTOM ROW */}
           <div className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between lg:gap-10 object-cover ">
-            {/* TIME */}
             <div className="flex gap-2 text-sm">
               <span>{TimeInMinAndSec(currentTime)}</span>
               <span>/</span>
               <span>{TimeInMinAndSec(duration)}</span>
             </div>
 
-            {/* CONTROLS */}
             <PlayerControls
               isPlaying={isPlaying}
               onPlayPause={pauseOrPlay}
@@ -173,7 +150,6 @@ const MusicTrack = () => {
               onPrev={prevTrack}
             />
 
-            {/* VOLUME */}
             <VolumeControl
               icon={getVolumeIcon()}
               value={volume}
@@ -183,14 +159,12 @@ const MusicTrack = () => {
         </div>
       </div>
 
-      {/* SANGE GALLERY */}
       <TrackGallery
         tracks={tracks}
         currentIndex={currentIndex}
         onSelect={setCurrentIndex}
       />
 
-      {/* {knapper til mobil på gallery} */}
       <div className="flex justify-center gap-3 mt-8 lg:hidden">
         <AiOutlinePlaySquare
           onClick={prevTrack}
@@ -201,7 +175,6 @@ const MusicTrack = () => {
         <AiOutlinePlaySquare onClick={nextTrack} size={35} />
       </div>
 
-      {/* AUDIO */}
       <audio
         ref={audioRef}
         onTimeUpdate={MusicPlayingTime}

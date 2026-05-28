@@ -144,7 +144,6 @@ const Gallery = ({ gallery }) => {
               </div>
             </div>
 
-            {/* Luk-knap */}
             <Dialog.Close asChild>
               <button className="absolute right-4 top-4  hover:text-[oklch(65.35%_0.2419_9.27)] transition z-50 cursor-pointer">
                 <MdClose size={30} />

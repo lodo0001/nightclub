@@ -32,7 +32,6 @@ export const Navbar = () => {
           />
         </Link>
 
-        {/* Kode til computer*/}
         <div
           className="hidden md:flex gap-10"
           onMouseLeave={() => setHoveredPath(null)}
@@ -51,7 +50,6 @@ export const Navbar = () => {
           ))}
         </div>
 
-        {/* Kode til burger menu */}
         <button popoverTarget="burger-menu" className="md:hidden p-2">
           <Menu size={32} />
         </button>
@@ -108,7 +106,6 @@ const Links = ({
   const isActive = activePath === href;
   const showLine = isHovered || (isActive && hoveredPath === null);
 
-  // kode til navbar animation
   return (
     <motion.a
       initial="initial"

@@ -3,7 +3,6 @@
 export default function TrackGallery({ tracks, currentIndex, onSelect }) {
   return (
     <>
-      {/* MOBILE */}
       <div className="flex flex-col items-center mt-10 lg:hidden">
         <div className="cursor-pointer">
           <img
@@ -18,7 +17,6 @@ export default function TrackGallery({ tracks, currentIndex, onSelect }) {
         </div>
       </div>
 
-      {/* DESKTOP */}
       <div className="hidden lg:flex gap-6 mt-10">
         {tracks.map((track, index) => (
           <div
@@ -28,7 +26,6 @@ export default function TrackGallery({ tracks, currentIndex, onSelect }) {
               index === currentIndex ? "opacity-100 scale-105" : "opacity-50"
             }`}
           >
-            {/* IMAGE*/}
             <div className="relative group">
               <img
                 src={track.image}
@@ -36,7 +33,6 @@ export default function TrackGallery({ tracks, currentIndex, onSelect }) {
                 className="w-32 h-32 object-cover"
               />
 
-              {/* Når man hover over en sang i sange gallery */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pink-corners"></div>
             </div>
 

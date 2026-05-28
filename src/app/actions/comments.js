@@ -39,7 +39,6 @@ export async function createComment(prevState, formData) {
       };
     }
 
-    // Fortæller Next.js, at den skal genindlæse event-siden, så den nye kommentar dukker op med det samme
     // AI brugt her
     revalidatePath(`/events/${eventId}`);
 

@@ -6,10 +6,8 @@ import { createComment } from "@/app/actions/comments";
 export default function Comments({ comments, eventId }) {
   const formRef = useRef(null);
 
-  // useActionState tager imod vores action (comments.js) og en start-tilstand (null)
   const [state, formAction, isPending] = useActionState(createComment, null);
 
-  // Hvis kommentaren blev oprettet successfully, tømmer vi formularen
   useEffect(() => {
     if (state?.success) {
       formRef.current?.reset();
@@ -44,13 +42,11 @@ export default function Comments({ comments, eventId }) {
       </div>
 
       <div className="flex flex-col items-center mt-12 md:mt-20 mb-10">
-        {/* her kobler vi formAction på vores form og formRef til at kunne nulstille */}
         <form
           ref={formRef}
           action={formAction}
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full"
         >
-          {/* Skjult input så actionen ved hvilket event-id kommentaren hører til */}
           <input type="hidden" name="eventId" value={eventId} />
 
           <input
@@ -78,7 +74,6 @@ export default function Comments({ comments, eventId }) {
             required
           />
 
-          {/* Feedback beskeder til brugeren */}
           <div className="sm:col-span-2 text-center mt-2">
             {state?.message && (
               <p className={state.success ? "text-green-500" : "text-red-500"}>

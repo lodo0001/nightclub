@@ -18,7 +18,6 @@ const FeaturedEvents = ({ events }) => {
         <div className="h-0.5 mt-2 w-24 md:w-40 lg:w-64 bg-linear-to-r from-transparent via-[oklch(65.35%_0.2419_9.27)] to-transparent" />
       </div>
 
-      {/* Events */}
       <div className="grid grid-cols-1 ml-10 mr-10 md:grid-cols-2 md:m-2 gap-4 z-10">
         {events.map((event) => (
           <div key={event.id}>
@@ -29,13 +28,10 @@ const FeaturedEvents = ({ events }) => {
                 className="object-cover w-full"
               />
 
-              {/* Hover overlay */}
               <div className="absolute inset-0 bg-black/60 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500 pink-corners">
-                {/* Pink border linjer */}
                 <div className="absolute top-0 left-0 right-0 h-0.75 bg-[oklch(65.35%_0.2419_9.27)]" />
                 <div className="absolute bottom-0 left-0 right-0 h-0.75 bg-[oklch(65.35%_0.2419_9.27)]" />
 
-                {/* Button */}
                 <div className="flex justify-center items-center pt-30">
                   <Link
                     href={`/booking?eventId=${event.id}`}
@@ -45,7 +41,6 @@ const FeaturedEvents = ({ events }) => {
                   </Link>
                 </div>
 
-                {/* Text */}
                 <div className="hidden sm:block bg-black/60 p-3">
                   <h2 className="font-extrabold">NIGHT CLUB</h2>
                   <p>{event.excerpt}</p>
@@ -53,7 +48,6 @@ const FeaturedEvents = ({ events }) => {
               </div>
             </div>
 
-            {/* Bottom info bar */}
             <div className="sm:grid md:flex justify-between items-center p-2 bg-[oklch(53.17%_0.1971_9.42)]">
               <h2 className="font-extrabold text-md">{event.title}</h2>
 

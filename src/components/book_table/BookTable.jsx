@@ -25,7 +25,7 @@ const BookTable = ({ allEvents, allReservations = [], chosenEvent = null }) => {
         ...prev,
         eventId: chosenEvent.id.toString(),
         date: chosenEvent.date.split("T")[0],
-        table: "", // Nulstil bord hvis de skifter event
+        table: "",
       }));
     }
   }, [chosenEvent]);
