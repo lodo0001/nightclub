@@ -1,3 +1,5 @@
+// AI Har hjulpet os med kommentar sektionen, helt præcist hvordan brugeren kan skrive en ny kommentar til eventet.
+
 "use server";
 
 import { revalidatePath } from "next/cache";
@@ -38,6 +40,7 @@ export async function createComment(prevState, formData) {
     }
 
     // Fortæller Next.js, at den skal genindlæse event-siden, så den nye kommentar dukker op med det samme
+    // AI brugt her
     revalidatePath(`/events/${eventId}`);
 
     return { success: true, message: "Your comment has been added!" };

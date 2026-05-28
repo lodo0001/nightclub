@@ -1,3 +1,5 @@
+// AI har hjulpet os med Night Club Track sektionen
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
